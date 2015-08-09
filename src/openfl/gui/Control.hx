@@ -36,7 +36,9 @@ class Control extends Sprite
 	{
 		super();
 		
-		Lib.current.stage.addEventListener(Event.RESIZE, onStageResize);
+		_dock = 0;
+		
+		addEventListener(Event.ADDED_TO_STAGE, init);
 	}
 	
 //Public functions and behaviour
@@ -45,30 +47,33 @@ class Control extends Sprite
 
 	
 //Private functions and behaviour
+
+	@:noCompletion private function init(e:Event)
+	{
+		removeEventListener(Event.ADDED_TO_STAGE, init);
+		
+		Lib.current.stage.addEventListener(Event.RESIZE, onStageResize);
+	}
 	
 	@:noCompletion private function onStageResize(e:Event)
 	{
-		switch (dock)
-		{
-			//TODO (tienery): Complete implementation of docking. Should probably do docking calculations on the stage
-			//instead of each object for optimisations sake.
-			case DOCK_NONE:
-				if (flagComparison(anchor, ANCHOR_RIGHT))
-					x = _right - width;
-				if (flagComparison(anchor, ANCHOR_BOTTOM))
-					y = _bottom - height;
-		}
+		trace("Resized.");
+		
+		if (flagComparison(anchor, ANCHOR_RIGHT))
+			x = stage.stageWidth - _right - width;
+		if (flagComparison(anchor, ANCHOR_BOTTOM))
+			y = stage.stageHeight - _bottom - height;
 	}
 	
 	@:noCompletion private function recalc()
 	{
-		var totalTop = 0;
-		var totalRight = 0;
-		var totalLeft = 0;
-		var totalBottom = 0;
+		var totalTop:Float = 0;
+		var totalRight:Int = 0;
+		var totalLeft:Int = 0;
+		var totalBottom:Int = 0;
 		for (i in 0...parent.numChildren)
 		{
-			if (Type.getClassName(parent.getChildAt(i)) == Type.getClassName(Control))
+			if (Type.getClassName(Type.getClass(parent.getChildAt(i))) == Type.getClassName(Control))
 			{	
 				var obj = cast (parent.getChildAt(i), Control);
 				if (obj.dock == DOCK_TOP)
@@ -105,11 +110,13 @@ class Control extends Sprite
 	@:noCompletion function get_anchor() return _anchor;
 	@:noCompletion function set_anchor(val)
 	{
-		if (flagComparison(val, ANCHOR_RIGHT))
-			_right = stage.stageWidth - x + width;
-			
+		if (flagComparison(val, ANCHOR_RIGHT)) {
+			trace(x + width);
+			_right = Lib.current.stage.stageWidth - x + width;
+			trace(_right);
+		}
 		if (flagComparison(val, ANCHOR_BOTTOM))
-			_bottom = stage.stageHeight - y + height;
+			_bottom = Lib.current.stage.stageHeight - y + height;
 			
 		return _anchor = val;
 	}
