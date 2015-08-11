@@ -23,6 +23,7 @@ SOFTWARE.
 */
 
 package openfl.gui;
+import openfl.gui.styles.Style;
 import openfl.text.TextField;
 import openfl.text.AntiAliasType;
 import openfl.text.TextFieldAutoSize;
@@ -32,8 +33,38 @@ import openfl.text.TextFieldType;
 
 class TextControl extends Control
 {
-
 	
+	/**
+	 * Create a TextControl representing an unselectable TextField.
+	 * @param	value		The default value of the control.
+	 * @param	font		The embedded asset or name of the font to use.
+	 * @param	fontStyle	The style of the font, including size, color and underline.
+	 * @param	embedded	Whether to use embedded resources or device fonts.
+	 */
+	public function new(value:String, font:String = "Arial", fontStyle:FontStyle = null, embedded:Bool = false) 
+	{
+		super();
+		
+		_txtField = new TextField();
+		
+		if (fontStyle != null)
+			defaultTextFormat = new TextFormat(embedded ? Assets.getFont(font + ".ttf").fontName : font, 
+										fontStyle.size, fontStyle.color, null, null, fontStyle.underline);
+		else
+			defaultTextFormat = new TextFormat(embedded ? Assets.getFont(font + ".ttf").fontName : font, 
+										11, 0x000000, null, null, false);
+			
+		autoSize = TextFieldAutoSize.LEFT;
+		embedFonts = embedded;
+		text = value;
+		selectable = false;
+		multiline = false;
+		
+		addChild(_txtField);
+	}
+	
+//Properties
+
 	@:noCompletion private var _txtField:TextField;
 	
 	public var antiAliasType(get, set):AntiAliasType;
@@ -63,12 +94,22 @@ class TextControl extends Control
 	public var bottomScrollV(get, null):Int;
 	@:noCompletion function get_bottomScrollV() return _txtField.bottomScrollV;
 	
-	public var caretIndex(get, set):Int;
+	public var caretIndex(get, 
+		#if flash 
+		null
+		#else
+		set
+		#end
+		):Int;
 	@:noCompletion function get_caretIndex() return _txtField.caretIndex;
+	#if !flash
 	@:noCompletion function set_caretIndex(val) return _txtField.caretIndex = val;
+	#end
 	
+	#if !flash
 	public var caretPos(get, null):Int;
 	@:noCompletion function get_caretPos() return _txtField.caretPos;
+	#end
 	
 	public var defaultTextFormat(get, set):TextFormat;
 	@:noCompletion function get_defaultTextFormat() return _txtField.defaultTextFormat;
@@ -126,13 +167,29 @@ class TextControl extends Control
 	@:noCompletion function get_selectable() return _txtField.selectable;
 	@:noCompletion function set_selectable(val) return _txtField.selectable = val;
 	
-	public var selectionBeginIndex(get, set):Int;
+	public var selectionBeginIndex(get, 
+		#if flash
+		null
+		#else
+		set
+		#end
+		):Int;
 	@:noCompletion function get_selectionBeginIndex() return _txtField.selectionBeginIndex;
+	#if !flash
 	@:noCompletion function set_selectionBeginIndex(val) return _txtField.selectionBeginIndex = val;
+	#end
 	
-	public var selectionEndIndex(get, set):Int;
+	public var selectionEndIndex(get, 
+		#if flash
+		null
+		#else
+		set
+		#end
+		):Int;
 	@:noCompletion function get_selectionEndIndex() return _txtField.selectionEndIndex;
+	#if !flash
 	@:noCompletion function set_selectionEndIndex(val) return _txtField.selectionEndIndex = val;
+	#end
 	
 	public var sharpness(get, set):Float;
 	@:noCompletion function get_sharpness() return _txtField.sharpness;
@@ -159,27 +216,5 @@ class TextControl extends Control
 	public var wordWrap(get, set):Bool;
 	@:noCompletion function get_wordWrap() return _txtField.wordWrap;
 	@:noCompletion function set_wordWrap(val) return _txtField.wordWrap = val;
-	
-	public function new(value:String, font:String = "Arial", fontStyle:FontStyle = null, embedded:Bool = false) 
-	{
-		super();
-		
-		_txtField = new TextField();
-		
-		if (fontStyle != null)
-			defaultTextFormat = new TextFormat(embedded ? Assets.getFont(font + ".ttf").fontName : font, 
-										fontStyle.size, fontStyle.color, null, null, fontStyle.underline);
-		else
-			defaultTextFormat = new TextFormat(embedded ? Assets.getFont(font + ".ttf").fontName : font, 
-										11, 0x000000, null, null, false);
-			
-		autoSize = TextFieldAutoSize.LEFT;
-		embedFonts = embedded;
-		text = value;
-		selectable = false;
-		multiline = false;
-		
-		addChild(_txtField);
-	}
 	
 }

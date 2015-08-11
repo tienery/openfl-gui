@@ -25,6 +25,7 @@ SOFTWARE.
 package openfl.gui;
 import openfl.display.Sprite;
 import openfl.events.Event;
+import openfl.gui.styles.Style;
 
 class Control extends Sprite
 {
@@ -37,13 +38,17 @@ class Control extends Sprite
 		super();
 		
 		_dock = 0;
+		_anchor = ANCHOR_TOP | ANCHOR_LEFT;
 		
 		addEventListener(Event.ADDED_TO_STAGE, init);
 	}
 	
 //Public functions and behaviour
 	
-	
+	public function onStyleChanged(style:Style):Void
+	{
+		
+	}
 
 	
 //Private functions and behaviour
@@ -56,9 +61,7 @@ class Control extends Sprite
 	}
 	
 	@:noCompletion private function onStageResize(e:Event)
-	{
-		trace("Resized.");
-		
+	{	
 		if (flagComparison(anchor, ANCHOR_RIGHT))
 			x = stage.stageWidth - _right - width;
 		if (flagComparison(anchor, ANCHOR_BOTTOM))
@@ -73,7 +76,7 @@ class Control extends Sprite
 		var totalBottom:Int = 0;
 		for (i in 0...parent.numChildren)
 		{
-			if (Type.getClassName(Type.getClass(parent.getChildAt(i))) == Type.getClassName(Control))
+			if (Std.is(parent.getChildAt(i), Control))
 			{	
 				var obj = cast (parent.getChildAt(i), Control);
 				if (obj.dock == DOCK_TOP)
@@ -137,10 +140,21 @@ class Control extends Sprite
 	 * The context menu that appears when this control is right-clicked
 	 * within its bounds.
 	 */
-	public var contextMenu(get, set):ContextMenuStrip;
+	public var contextMenuStrip(get, set):ContextMenuStrip;
 	
-	@:noCompletion function get_contextMenu() return _contextMenu;
-	@:noCompletion function set_contextMenu(val) return _contextMenu = val;
+	@:noCompletion function get_contextMenuStrip() return _contextMenu;
+	@:noCompletion function set_contextMenuStrip(val) return _contextMenu = val;
+	
+	@:noCompletion private var _style:Style;
+	public var style(get, set):Style;
+	
+	@:noCompletion function get_style() return _style;
+	@:noCompletion function set_style(val)
+	{
+		onStyleChanged(val);
+		return _style = val;
+	}
+	
 	
 	@:noCompletion private var _toolTip:ToolTip;
 	/**
@@ -152,12 +166,12 @@ class Control extends Sprite
 	@:noCompletion function get_toolTip() return _toolTip;
 	@:noCompletion function set_toolTip(val) return _toolTip = val;
 	
-	@:noCompletion private var _toolTipValue:String;
+	@:noCompletion private var _toolTipValue:Dynamic;
 	/**
-	 * The string value of the tooltip to show when the mouse
+	 * The data values of the tooltip to show when the mouse
 	 * hovers over this control.
 	 */
-	public var toolTipValue(get, set):String;
+	public var toolTipValue(get, set):Dynamic;
 	
 	@:noCompletion function get_toolTipValue() return _toolTipValue;
 	@:noCompletion function set_toolTipValue(val) return _toolTipValue = val;
