@@ -8,9 +8,9 @@
 	<!-- output -->
 	<app main="Main" file="Openfl-gui" path="bin" />
 	
-	<window background="#000000" fps="60" />
+	<window background="#000000" fps="120" />
 	<window width="800" height="480" unless="mobile" />
-	<window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
+	<window orientation="landscape" vsync="false" antialiasing="0" hardware="true" if="cpp" />
 	
 	<!-- classpath, haxe libs -->
 	<source path="src" />

@@ -176,5 +176,12 @@ class TextBox extends Control
 		redraw();
 		return _totalHeight;
 	}
+	
+	/**
+	 * Gets or sets the text within the control.
+	 */
+	public var text(get, set):String;
+	@:noCompletion function get_text() return _txtField.text;
+	@:noCompletion function set_text(val) return _txtField.text = val;
 
 }

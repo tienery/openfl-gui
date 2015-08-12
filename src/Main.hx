@@ -24,6 +24,7 @@ class Main extends Sprite
 	
 	private function labelExample()
 	{
+		
 		var label = new TextControl("This is an example", "font/OpenSans-Regular", FontStyle.DEFAULT, true);
 		label.x = Lib.current.stage.stageWidth - label.width - 10;
 		label.y = Lib.current.stage.stageHeight - label.height - 10;
@@ -53,28 +54,29 @@ class Main extends Sprite
 	
 	private function buttonExample()
 	{
-		var btn = new Button("Click Me!", "font/OpenSans-Regular", FontStyle.DEFAULT, true);
-		btn.x = 100;
-		btn.y = 50;
-		trace("X");
+		for (i in 0...150)
+		{
+			var btn = new Button("Click Me!", "font/OpenSans-Regular", FontStyle.DEFAULT, true);
+			btn.x = Math.random() * 848;
+			btn.y = Math.random() * 480;
+			
+			var style = new ButtonStyle();
+			style.textColor = 0x006799;
+			style.textColorOnOver = 0x00A5B9;
+			style.textColorOnDown = 0x005454;
+			style.outlineColor = 0x006799;
+			style.outlineColorOnOver = 0x00A5B9;
+			style.outlineColorOnDown = 0x005454;
+			style.fillColor = 0x001616;
+			style.fillColorOnOver = 0x002222;
+			style.fillColorOnDown = 0x000505;
+			style.lineThickness = 1;
+			
+			btn.style = style;
+			
+			addChild(btn);
+		}
 		
-		var style = new ButtonStyle();
-		style.textColor = 0x006799;
-		style.textColorOnOver = 0x00A5B9;
-		style.textColorOnDown = 0x005454;
-		style.outlineColor = 0x006799;
-		style.outlineColorOnOver = 0x00A5B9;
-		style.outlineColorOnDown = 0x005454;
-		style.fillColor = 0x001616;
-		style.fillColorOnOver = 0x002222;
-		style.fillColorOnDown = 0x000505;
-		style.lineThickness = 1;
-		trace("X");
-		
-		btn.style = style;
-		trace("X");
-		
-		addChild(btn);
 	}
 
 }

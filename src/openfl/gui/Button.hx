@@ -237,7 +237,7 @@ class Button extends Control
 	}
 
 	/**
-	 * Sets the text value of the Button.
+	 * Gets or sets the text value of the Button.
 	 */
 	public var text(get, set):String;
 	@:noCompletion function get_text() return _txtField.text;

@@ -41,12 +41,19 @@ class CheckBox extends Control
 	{
 		super();
 		
+		_txtField = new TextControl(value, font, fontStyle, embedded);
 		
 	}
 	
+//Private functions
+
+	private function redraw()
+	{
+		
+	}
 	
 //Properties
 
-	
+	@:noCompletion private var _txtField:TextControl;
 	
 }
