@@ -1,7 +1,9 @@
 package;
 
 import openfl.display.Sprite;
-import openfl.gui.FontStyle;
+import openfl.gui.Button;
+import openfl.gui.styles.ButtonStyle;
+import openfl.gui.styles.FontStyle;
 import openfl.gui.Control;
 import openfl.gui.styles.TextBoxStyle;
 import openfl.gui.TextBox;
@@ -16,7 +18,8 @@ class Main extends Sprite
 		super();
 		
 		//labelExample();
-		textBoxExample();
+		//textBoxExample();
+		buttonExample();
 	}
 	
 	private function labelExample()
@@ -41,10 +44,37 @@ class Main extends Sprite
 		style.outlineColorOnOver = 0x00A5B9;
 		style.fillColorOnOver = 0x002222;
 		style.fillColor = 0x001616;
+		style.lineThickness = 1;
 		
 		tb.style = style;
 		
 		addChild(tb);
+	}
+	
+	private function buttonExample()
+	{
+		var btn = new Button("Click Me!", "font/OpenSans-Regular", FontStyle.DEFAULT, true);
+		btn.x = 100;
+		btn.y = 50;
+		trace("X");
+		
+		var style = new ButtonStyle();
+		style.textColor = 0x006799;
+		style.textColorOnOver = 0x00A5B9;
+		style.textColorOnDown = 0x005454;
+		style.outlineColor = 0x006799;
+		style.outlineColorOnOver = 0x00A5B9;
+		style.outlineColorOnDown = 0x005454;
+		style.fillColor = 0x001616;
+		style.fillColorOnOver = 0x002222;
+		style.fillColorOnDown = 0x000505;
+		style.lineThickness = 1;
+		trace("X");
+		
+		btn.style = style;
+		trace("X");
+		
+		addChild(btn);
 	}
 
 }

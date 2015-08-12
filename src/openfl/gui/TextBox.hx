@@ -26,23 +26,21 @@ package openfl.gui;
 import openfl.display.Sprite;
 import openfl.events.FocusEvent;
 import openfl.geom.Rectangle;
+import openfl.gui.styles.FontStyle;
 import openfl.gui.styles.Style;
 import openfl.text.TextFieldType;
 import openfl.events.Event;
 import openfl.gui.styles.TextBoxStyle;
 import openfl.events.MouseEvent;
 import openfl.events.TextEvent;
+import openfl.text.TextFieldAutoSize;
 
-//TODO: Make adjustable scrollRect that works properly.
-//As you type, the text field should scroll left automatically.
-//On focus out, the text field should return to start.
-//Moving caret should move the text field left/right accordingly.
 class TextBox extends Control
 {
 
 	@:noCompletion private var _hasFocus:Bool;
 	@:noCompletion private var _txtField:TextControl;
-	
+
 	/**
 	 * Create an interactive text box.
 	 * @param	defaultValue	The default value of the text box.
@@ -60,17 +58,15 @@ class TextBox extends Control
 		_totalHeight = height;
 		
 		_txtField = new TextControl(defaultValue, font, fontStyle, embedded);
+		_txtField.autoSize = TextFieldAutoSize.NONE;
+		_txtField.width = width - 4;
+		_txtField.multiline = true;
 		_txtField.selectable = true;
 		_txtField.type = TextFieldType.INPUT;
 		_txtField.x = 2;
 		_txtField.y = 1;
 		
 		addChild(_txtField);
-		
-		_txtField.addEventListener(TextEvent.TEXT_INPUT, function(e)
-		{
-			
-		});
 		
 		_txtField.addEventListener(MouseEvent.MOUSE_WHEEL, function(e)
 		{
@@ -97,16 +93,16 @@ class TextBox extends Control
 			redraw();
 		});
 	}
-	
+
 //Public functions
 
 	override public function onStyleChanged(style:Style):Void 
 	{
 		redraw();
 	}
-	
+
 //Private functions
-	
+
 	private function redraw()
 	{
 		var casted:TextBoxStyle = null;
@@ -116,7 +112,8 @@ class TextBox extends Control
 		graphics.clear();
 		if (casted != null)
 		{
-			if (_hasFocus) {
+			if (_hasFocus) 
+			{
 				graphics.lineStyle(casted.lineThickness, casted.outlineColorOnOver);
 				graphics.beginFill(casted.fillColorOnOver);
 				_txtField.textColor = casted.textColorOnOver;
@@ -130,7 +127,8 @@ class TextBox extends Control
 		}
 		else
 		{
-			if (_hasFocus) {
+			if (_hasFocus) 
+			{
 				graphics.lineStyle(1, 0x000000);
 				graphics.beginFill(0xFFFFFF);
 				_txtField.textColor = 0x000000;
@@ -145,7 +143,7 @@ class TextBox extends Control
 		
 		graphics.drawRect(0, 0, totalWidth, totalHeight);
 	}
-	
+
 //Properties
 
 	@:noCompletion private var _totalWidth:Float;
@@ -154,22 +152,23 @@ class TextBox extends Control
 	 * the bounds of the text box.
 	 */
 	public var totalWidth(get, set):Float;
-	
+
 	@:noCompletion function get_totalWidth() return _totalWidth;
 	@:noCompletion function set_totalWidth(val)
 	{
 		_totalWidth = val;
+		_txtField.width = val - 4;
 		redraw();
 		return _totalWidth;
 	}
-	
+
 	@:noCompletion private var _totalHeight:Float;
 	/**
 	 * Specifies the height of the text box. This will redraw
 	 * the bounds of the text box.
 	 */
 	public var totalHeight(get, set):Float;
-	
+
 	@:noCompletion function get_totalHeight() return _totalHeight;
 	@:noCompletion function set_totalHeight(val) 
 	{
@@ -177,5 +176,5 @@ class TextBox extends Control
 		redraw();
 		return _totalHeight;
 	}
-	
+
 }

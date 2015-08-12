@@ -23,6 +23,7 @@ SOFTWARE.
 */
 
 package openfl.gui;
+import openfl.gui.styles.FontStyle;
 import openfl.gui.styles.Style;
 import openfl.text.TextField;
 import openfl.text.AntiAliasType;
