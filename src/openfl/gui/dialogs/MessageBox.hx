@@ -22,31 +22,19 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-package openfl.gui;
-import openfl.gui.styles.FontStyle;
+package openfl.gui.dialogs;
 
-
-class CheckBox extends Control
+//TODO
+class MessageBox extends Dialog
 {
 
 	/**
-	 * An option selector.
-	 * @param value		The text value of the check box.
-	 * @param checked	The default check state.
-	 * @param font		The embedded resource or device font to use.
-	 * @param fontStyle	The style of the font, including size, color and underline.
-	 * @param embedded	Whether to use embedded resources for the font.
+	 * Displays a message box, containing a message, and an optional title, icon and
+	 * message button layout. The default message button layout is OkCancel.
 	 */
-	public function new(value:String, checked:Bool = false, font:String = "Arial", fontStyle:FontStyle = null, embedded:Bool = false) 
+	public function new() 
 	{
-		super();
-		
 		
 	}
-	
-	
-//Properties
-
-	
 	
 }
