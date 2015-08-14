@@ -95,22 +95,8 @@ class TextControl extends Control
 	public var bottomScrollV(get, null):Int;
 	@:noCompletion function get_bottomScrollV() return _txtField.bottomScrollV;
 	
-	public var caretIndex(get, 
-		#if flash 
-		null
-		#else
-		set
-		#end
-		):Int;
+	public var caretIndex(get, null):Int;
 	@:noCompletion function get_caretIndex() return _txtField.caretIndex;
-	#if !flash
-	@:noCompletion function set_caretIndex(val) return _txtField.caretIndex = val;
-	#end
-	
-	#if !flash
-	public var caretPos(get, null):Int;
-	@:noCompletion function get_caretPos() return _txtField.caretPos;
-	#end
 	
 	public var defaultTextFormat(get, set):TextFormat;
 	@:noCompletion function get_defaultTextFormat() return _txtField.defaultTextFormat;
@@ -168,29 +154,11 @@ class TextControl extends Control
 	@:noCompletion function get_selectable() return _txtField.selectable;
 	@:noCompletion function set_selectable(val) return _txtField.selectable = val;
 	
-	public var selectionBeginIndex(get, 
-		#if flash
-		null
-		#else
-		set
-		#end
-		):Int;
+	public var selectionBeginIndex(get, null):Int;
 	@:noCompletion function get_selectionBeginIndex() return _txtField.selectionBeginIndex;
-	#if !flash
-	@:noCompletion function set_selectionBeginIndex(val) return _txtField.selectionBeginIndex = val;
-	#end
 	
-	public var selectionEndIndex(get, 
-		#if flash
-		null
-		#else
-		set
-		#end
-		):Int;
+	public var selectionEndIndex(get, null):Int;
 	@:noCompletion function get_selectionEndIndex() return _txtField.selectionEndIndex;
-	#if !flash
-	@:noCompletion function set_selectionEndIndex(val) return _txtField.selectionEndIndex = val;
-	#end
 	
 	public var sharpness(get, set):Float;
 	@:noCompletion function get_sharpness() return _txtField.sharpness;

@@ -1,5 +1,6 @@
 package;
 
+import openfl.display.FPS;
 import openfl.display.Sprite;
 import openfl.gui.Button;
 import openfl.gui.CheckBox;
@@ -19,10 +20,12 @@ class Main extends Sprite
 	{
 		super();
 		
-		//labelExample();
+		labelExample();
 		//textBoxExample();
 		//buttonExample();
-		checkboxExample();
+		//checkboxExample();
+		
+		addChild(new FPS(2, 2, 0xFF0000));
 	}
 	
 	private function labelExample()
