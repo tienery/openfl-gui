@@ -97,7 +97,6 @@ class Control extends Sprite
 		return current & original != 0;
 	}
 	
-	
 //Properties
 	
 	@:noCompletion private var _bottom:Float;
@@ -114,9 +113,7 @@ class Control extends Sprite
 	@:noCompletion function set_anchor(val)
 	{
 		if (flagComparison(val, ANCHOR_RIGHT)) {
-			trace(x + width);
 			_right = Lib.current.stage.stageWidth - x + width;
-			trace(_right);
 		}
 		if (flagComparison(val, ANCHOR_BOTTOM))
 			_bottom = Lib.current.stage.stageHeight - y + height;

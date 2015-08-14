@@ -20,10 +20,10 @@ class Main extends Sprite
 	{
 		super();
 		
-		labelExample();
+		//labelExample();
 		//textBoxExample();
 		//buttonExample();
-		//checkboxExample();
+		checkboxExample();
 		
 		addChild(new FPS(2, 2, 0xFF0000));
 	}
@@ -31,6 +31,7 @@ class Main extends Sprite
 	private function labelExample()
 	{
 		var label = new TextControl("This is an example", "font/OpenSans-Regular", FontStyle.DEFAULT, true);
+		label.textColor = 0xFFFFFF;
 		label.x = Lib.current.stage.stageWidth - label.width - 10;
 		label.y = Lib.current.stage.stageHeight - label.height - 10;
 		label.anchor = Control.ANCHOR_BOTTOM | Control.ANCHOR_RIGHT;
@@ -82,7 +83,7 @@ class Main extends Sprite
 	
 	private function checkboxExample()
 	{
-		var chb = new CheckBox("This is an example.", false);
+		var chb = new CheckBox("This is an example.", false, "font/OpenSans-Regular", FontStyle.DEFAULT, true);
 		
 		var style = new CheckBoxStyle();
 		style.checkStyle = "tick";

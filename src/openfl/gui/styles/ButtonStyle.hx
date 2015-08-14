@@ -49,6 +49,8 @@ class ButtonStyle extends TextBoxStyle
 	public function new() 
 	{
 		super();
+		
+		
 	}
 	
 }
