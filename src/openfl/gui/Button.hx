@@ -30,6 +30,7 @@ import openfl.gui.styles.FontStyle;
 import openfl.gui.styles.Style;
 import openfl.text.TextFieldAutoSize;
 import openfl.events.MouseEvent;
+import openfl.events.Event;
 
 //TODO
 class Button extends Control
@@ -66,6 +67,7 @@ class Button extends Control
 		addEventListener(MouseEvent.MOUSE_OUT, function(e)
 		{
 			_isOver = false;
+			_isDown = false;
 			redraw();
 		});
 		
@@ -75,7 +77,10 @@ class Button extends Control
 			redraw();
 		});
 		
-		redraw();
+		addEventListener(Event.ADDED_TO_STAGE, function(e)
+		{
+			redraw();
+		});
 	}
 
 //Private functions

@@ -23,8 +23,11 @@ SOFTWARE.
 */
 
 package openfl.gui;
+import openfl.gui.styles.CheckBoxStyle;
 import openfl.gui.styles.FontStyle;
-
+import openfl.events.MouseEvent;
+import openfl.events.Event;
+import openfl.gui.styles.Style;
 
 class CheckBox extends Control
 {
@@ -43,17 +46,140 @@ class CheckBox extends Control
 		
 		_txtField = new TextControl(value, font, fontStyle, embedded);
 		
+		addChild(_txtField);
+		
+		addEventListener(MouseEvent.MOUSE_OVER, function(e)
+		{
+			_over = true;
+			redraw();
+		});
+		
+		addEventListener(MouseEvent.MOUSE_OUT, function(e)
+		{
+			_over = false;
+			_down = false;
+			redraw();
+		});
+		
+		addEventListener(MouseEvent.MOUSE_DOWN, function(e)
+		{
+			_down = true;
+			redraw();
+		});
+		
+		addEventListener(MouseEvent.MOUSE_UP, function(e)
+		{
+			_down = false;
+			redraw();
+		});
+		
+		addEventListener(MouseEvent.CLICK, function(e)
+		{
+			_checked = !_checked;
+			redraw();
+		});
+		
+		addEventListener(Event.ADDED_TO_STAGE, function(e)
+		{
+			redraw();
+		});
 	}
 	
-//Private functions
+//Functions
+
+	override public function onStyleChanged(style:Style):Void 
+	{
+		redraw();
+	}
 
 	private function redraw()
 	{
+		var casted:CheckBoxStyle = null;
+		if (Std.is(style, CheckBoxStyle))
+			casted = cast (style, CheckBoxStyle);
+			
+		var outlineColor:Int = 0x999999;
+		var fillColor:Int = 0x444444;
+		var textColor:Int = 0x444444;
+		var canStyle:Bool = false;
+		var checkStyle:String = "strike";
+		
+		if (casted != null) {
+			canStyle = true;
+			checkStyle = casted.checkStyle;
+		}
+		
+		graphics.clear();
+		if (_down)
+		{
+			outlineColor = canStyle ? casted.outlineColorOnDown : outlineColor - 0x222222;
+			fillColor = canStyle ? casted.fillColorOnDown : fillColor - 0x222222;
+			textColor = canStyle ? casted.textColorOnDown : textColor;
+		}
+		else if (_over)
+		{
+			outlineColor = canStyle ? casted.outlineColorOnOver : outlineColor + 0x222222;
+			fillColor = canStyle ? casted.fillColorOnOver : fillColor + 0x111111;
+			textColor = canStyle ? casted.textColorOnOver : textColor;
+		}
+		else
+		{
+			outlineColor = canStyle ? casted.outlineColor : outlineColor;
+			fillColor = canStyle ? casted.fillColor : fillColor;
+			textColor = canStyle ? casted.textColor : textColor;
+		}
+		
+		graphics.beginFill(fillColor);
+		graphics.lineStyle(canStyle ? casted.lineThickness : 1, outlineColor);
+		
+		graphics.drawRect(0, 0, 20, 20);
+		
+		graphics.lineStyle(canStyle ? casted.innerLineThickness : 2, outlineColor);
+		if (_checked)
+		{
+			switch (checkStyle)
+			{
+				case "cross":
+					graphics.moveTo(1, 1);
+					graphics.lineTo(19, 19);
+					graphics.moveTo(1, 19);
+					graphics.lineTo(19, 1);
+				case "strike":
+					graphics.moveTo(1, 19);
+					graphics.lineTo(19, 1);
+				case "tick":
+					graphics.moveTo(1, 11);
+					graphics.curveTo(4, 14, 7, 18);
+					graphics.moveTo(7, 18);
+					graphics.lineTo(18, 1);
+			}
+		}
+		
+		_txtField.textColor = textColor;
+		
+		_txtField.x = 23;
+		_txtField.y = height / 2 - _txtField.height / 2;
 		
 	}
 	
 //Properties
 
 	@:noCompletion private var _txtField:TextControl;
+	@:noCompletion private var _over:Bool;
+	@:noCompletion private var _down:Bool;
+	
+	@:noCompletion private var _checked:Bool;
+	public var checked(get, set):Bool;
+	@:noCompletion function get_checked() return _checked;
+	@:noCompletion function set_checked(val)
+	{
+		_checked = val;
+		redraw();
+		return _checked;
+	}
+	
+	public var text(get, set):String;
+	@:noCompletion function get_text() return _txtField.text;
+	@:noCompletion function set_text(val) return _txtField.text = val;
 	
 }
