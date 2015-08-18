@@ -4,6 +4,7 @@ import openfl.display.FPS;
 import openfl.display.Sprite;
 import openfl.gui.Button;
 import openfl.gui.CheckBox;
+import openfl.gui.RadioButton;
 import openfl.gui.styles.ButtonStyle;
 import openfl.gui.styles.CheckBoxStyle;
 import openfl.gui.styles.FontStyle;
@@ -23,7 +24,8 @@ class Main extends Sprite
 		//labelExample();
 		//textBoxExample();
 		//buttonExample();
-		checkboxExample();
+		//checkboxExample();
+		//radioButtonExample();
 		
 		addChild(new FPS(2, 2, 0xFF0000));
 	}
@@ -105,6 +107,38 @@ class Main extends Sprite
 		chb.y = 50;
 		
 		addChild(chb);
+	}
+	
+	private function radioButtonExample()
+	{
+		var rdb1 = new RadioButton("Example A", true, "font/OpenSans-Regular", FontStyle.DEFAULT, true);
+		var rdb2 = new RadioButton("Example B", false, "font/OpenSans-Regular", FontStyle.DEFAULT, true);
+		var rdb3 = new RadioButton("Example C", false, "font/OpenSans-Regular", FontStyle.DEFAULT, true);
+		
+		var style = new ButtonStyle();
+		style.fillColor = 0x001616;
+		style.fillColorOnDown = 0x000505;
+		style.fillColorOnOver = 0x002222;
+		style.lineThickness = 1;
+		style.outlineColor = 0x006799;
+		style.outlineColorOnDown = 0x005454;
+		style.outlineColorOnOver = 0x00A5B9;
+		style.textColor = 0x006799;
+		style.textColorOnOver = 0x00A5B9;
+		style.textColorOnDown = 0x005454;
+		
+		rdb1.style = rdb2.style = rdb3.style = style;
+		
+		rdb1.x = 50;
+		rdb1.y = 50;
+		rdb2.x = 50;
+		rdb2.y = 75;
+		rdb3.x = 50;
+		rdb3.y = 100;
+		
+		addChild(rdb1);
+		addChild(rdb2);
+		addChild(rdb3);
 	}
 
 }

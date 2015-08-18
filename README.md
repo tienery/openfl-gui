@@ -8,6 +8,7 @@ The following controls can be used:
 * TextControl (just a simple label)
 * Button (can add images)
 * CheckBox
+* RadioButton
 
 You can find sample code in Main.hx in the src folder.
 
@@ -23,7 +24,6 @@ To use this in HTML5, it is recommended to switch the `webgl` flag on compile, s
 
 As features are completed, they will be shifted up to the "Current Features" in the order that you see them here.
 
- * RadioButton
  * CheckedListBox
  * ComboBox
  * ListBox
