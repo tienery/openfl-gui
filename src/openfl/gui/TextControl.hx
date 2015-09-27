@@ -95,8 +95,10 @@ class TextControl extends Control
 	public var bottomScrollV(get, null):Int;
 	@:noCompletion function get_bottomScrollV() return _txtField.bottomScrollV;
 	
+	#if !legacy
 	public var caretIndex(get, null):Int;
 	@:noCompletion function get_caretIndex() return _txtField.caretIndex;
+	#end
 	
 	public var defaultTextFormat(get, set):TextFormat;
 	@:noCompletion function get_defaultTextFormat() return _txtField.defaultTextFormat;
@@ -118,8 +120,10 @@ class TextControl extends Control
 	@:noCompletion function get_htmlText() return _txtField.htmlText;
 	@:noCompletion function set_htmlText(val) return _txtField.htmlText = val;
 	
+	#if !legacy
 	public var length(get, null):Int;
 	@:noCompletion function get_length() return _txtField.length;
+	#end
 	
 	public var maxChars(get, set):Int;
 	@:noCompletion function get_maxChars() return _txtField.maxChars;
@@ -138,9 +142,11 @@ class TextControl extends Control
 	public var numLines(get, null):Int;
 	@:noCompletion function get_numLines() return _txtField.numLines;
 	
+	#if !legacy
 	public var restrict(get, set):String;
 	@:noCompletion function get_restrict() return _txtField.restrict;
 	@:noCompletion function set_restrict(val) return _txtField.restrict = val;
+	#end
 	
 	public var scrollH(get, set):Int;
 	@:noCompletion function get_scrollH() return _txtField.scrollH;
@@ -154,11 +160,13 @@ class TextControl extends Control
 	@:noCompletion function get_selectable() return _txtField.selectable;
 	@:noCompletion function set_selectable(val) return _txtField.selectable = val;
 	
+	#if !legacy
 	public var selectionBeginIndex(get, null):Int;
 	@:noCompletion function get_selectionBeginIndex() return _txtField.selectionBeginIndex;
 	
 	public var selectionEndIndex(get, null):Int;
 	@:noCompletion function get_selectionEndIndex() return _txtField.selectionEndIndex;
+	#end
 	
 	public var sharpness(get, set):Float;
 	@:noCompletion function get_sharpness() return _txtField.sharpness;

@@ -1,0 +1,14 @@
+{
+	"name": "openfl-gui",
+	"url": "http://github.com/tienery/openfl-gui",
+	"license": "MIT",
+	"tags": ["gui", "openfl"],
+	"description": "A rich selection of GUI components for OpenFL.",
+	"version": "2.0.0-alpha.7",
+	"classPath": "src/",
+	"contributors": ["tienery"],
+	"dependencies": {
+		"openfl": "3.3.6",
+		"lime": "2.6.6"
+	}
+}

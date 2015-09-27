@@ -1,0 +1,13 @@
+{
+	"basicTest": {
+		"lineColor": "red",
+		"lineThickness": 2,
+		"lineAlpha": 1,
+		"fillColor": "darkSeaGreen",
+		"fillAlpha": 1
+	},
+	"inheritTest": {
+		"inherits": "basicTest",
+		"fillColor": "0xFFFF00"
+	}
+}

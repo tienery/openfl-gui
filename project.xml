@@ -3,7 +3,7 @@
 	<!-- NMML reference: https://gist.github.com/1763850 -->
 	
 	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
-	<meta title="Openfl-gui" package="openfl.gui" version="1.0.0" company="tienery" />
+	<meta title="Openfl-gui" package="openfl.gui" version="1.0.1" company="tienery" />
 	
 	<!-- output -->
 	<app main="Main" file="Openfl-gui" path="bin" />
@@ -20,6 +20,7 @@
 	<!-- assets -->
 	<icon path="assets/openfl.svg" />
 	<assets path="assets/font" rename="font" />
+	<assets path="assets/info" rename="info" />
 	
 	<!-- optimize output
 	<haxeflag name="-dce full" /> -->

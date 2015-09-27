@@ -1,5 +1,6 @@
 package;
 
+import openfl.canvas.Rectangle;
 import openfl.display.FPS;
 import openfl.display.Sprite;
 import openfl.gui.Button;
@@ -12,6 +13,9 @@ import openfl.gui.Control;
 import openfl.gui.styles.TextBoxStyle;
 import openfl.gui.TextBox;
 import openfl.gui.TextControl;
+import openfl.canvas.Color;
+import openfl.canvas.StyleReader;
+import openfl.display.GradientType;
 import openfl.Lib;
 
 class Main extends Sprite 
@@ -26,6 +30,16 @@ class Main extends Sprite
 		//buttonExample();
 		//checkboxExample();
 		//radioButtonExample();
+		
+		StyleReader.CURRENT = new StyleReader("info/defaultStyles.json");
+		
+		var rect:Rectangle = new Rectangle(30, 30, 100, 100, "inheritTest");
+		rect.draw(graphics, true);
+		
+		//graphics.lineStyle(2, Color.red().value);
+		//graphics.lineGradientStyle(GradientType.LINEAR, [Color.red().value, Color.darkSeaGreen().value], [1, 1], [0, 1]);
+		//graphics.beginFill(Color.darkSeaGreen().value);
+		//graphics.drawRect(30, 30, 100, 100);
 		
 		addChild(new FPS(2, 2, 0xFF0000));
 	}

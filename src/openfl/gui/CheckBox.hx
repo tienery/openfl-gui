@@ -135,7 +135,7 @@ class CheckBox extends Control
 		graphics.drawRect(0, 0, 20, 20);
 		
 		graphics.lineStyle(canStyle ? casted.innerLineThickness : 2, outlineColor);
-		if (_checked)
+		if (_checked && !__indeterminate)
 		{
 			switch (checkStyle)
 			{
@@ -154,6 +154,10 @@ class CheckBox extends Control
 					graphics.lineTo(18, 1);
 			}
 		}
+		else if (__indeterminate)
+		{
+			graphics.drawRect(2, 2, 16, 16);
+		}
 		
 		_txtField.textColor = textColor;
 		
@@ -169,6 +173,9 @@ class CheckBox extends Control
 	@:noCompletion private var _down:Bool;
 	
 	@:noCompletion private var _checked:Bool;
+	/**
+	 * Gets or sets the check state of this check box.
+	 */
 	public var checked(get, set):Bool;
 	@:noCompletion function get_checked() return _checked;
 	@:noCompletion function set_checked(val)
@@ -177,9 +184,18 @@ class CheckBox extends Control
 		redraw();
 		return _checked;
 	}
-	
+	/**
+	 * Gets or sets the text value of this check box.
+	 */
 	public var text(get, set):String;
 	@:noCompletion function get_text() return _txtField.text;
 	@:noCompletion function set_text(val) return _txtField.text = val;
+	
+	@:noCompletion private var __indeterminate:Bool;
+	/**
+	 * Gets whether or not the check box is partially checked, often used with CheckBoxNode.
+	 */
+	public var indeterminate(get, null):Bool;
+	@:noCompletion function get_indeterminate() return __indeterminate;
 	
 }
