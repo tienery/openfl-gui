@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Openfl-gui by tienery</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Openfl-gui</h1>
+        <p>A GUI extension for OpenFL, containing a rich selection of hardware-accelerated and fully customisable controls.</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/tienery/openfl-gui" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/tienery/openfl-gui/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/tienery/openfl-gui/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>
+<a id="openfl-gui" class="anchor" href="#openfl-gui" aria-hidden="true"><span class="octicon octicon-link"></span></a>OpenFL GUI</h1>
+
+<p>A GUI extension for OpenFL, containing a rich selection of hardware-accelerated and fully customisable controls.</p>
+
+<h2>
+<a id="patch-notes-v200-alpha7" class="anchor" href="#patch-notes-v200-alpha7" aria-hidden="true"><span class="octicon octicon-link"></span></a>Patch Notes (v2.0.0-alpha.7)</h2>
+
+<h3>
+<a id="additions" class="anchor" href="#additions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Additions</h3>
+
+<p>The "canvas" package has been added with a styler that can read JSON-formatted text files.</p>
+
+<ul>
+<li>The <code>StyleReader</code> class is used to set a style. This currently does not apply to existing controls, as it is there for testing.</li>
+<li>You will still need to use <code>Styles</code> from the <code>gui.styles</code> package until the <code>canvas</code> package is fully complete.</li>
+<li>The <code>Color</code> class can be used to get known colors or to create your own that has variables for values with or without alpha, or alpha on its own.</li>
+</ul>
+
+<h3>
+<a id="changes" class="anchor" href="#changes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Changes</h3>
+
+<ul>
+<li>CheckedListBox is almost complete, but should not be used yet.</li>
+</ul>
+
+<h2>
+<a id="current-features" class="anchor" href="#current-features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Current Features</h2>
+
+<p>The following controls can be used:</p>
+
+<ul>
+<li>TextBox</li>
+<li>TextControl (just a simple label)</li>
+<li>Button (can add images)</li>
+<li>CheckBox</li>
+<li>RadioButton</li>
+</ul>
+
+<p>You can find sample code in Main.hx in the src folder.</p>
+
+<p>For best performance, turn vsync off and hardware on, and turning the fps limit up.
+If you are using a laptop with an integrated graphics card, this library may be suboptimal.
+This library is ideally optimal on systems with a dedicated graphics card, and these controls are designed to work
+alongside other graphics components, bitmaps and game features.
+To fully benefit from hardware-acceleration, it is recommended that OpenFL version 3.x is installed and compiled in <code>next</code>.</p>
+
+<p>To use this in HTML5, it is recommended to switch the <code>webgl</code> flag on compile, such as <code>openfl build html5 -Dwebgl</code>.</p>
+
+<h2>
+<a id="roadmap" class="anchor" href="#roadmap" aria-hidden="true"><span class="octicon octicon-link"></span></a>Roadmap</h2>
+
+<p>As features are completed, they will be shifted up to the "Current Features" in the order that you see them here.</p>
+
+<ul>
+<li>CheckedListBox (partially complete - does not work quite yet)</li>
+<li>ComboBox</li>
+<li>ListBox</li>
+<li>NumericUpDown</li>
+<li>ProgressBar</li>
+<li>Slider</li>
+<li>ToolTip</li>
+<li>ContextMenuStrip</li>
+<li>MenuStrip</li>
+</ul>
+
+<h3>
+<a id="advanced-controls" class="anchor" href="#advanced-controls" aria-hidden="true"><span class="octicon octicon-link"></span></a>Advanced Controls</h3>
+
+<ul>
+<li>FlowLayoutPanel</li>
+<li>GroupBox</li>
+<li>TabControl</li>
+<li>DragDropInterface</li>
+<li>ListView</li>
+<li>PropertyGrid</li>
+<li>StatusStrip</li>
+<li>ToolStrip</li>
+<li>TreeView</li>
+<li>DataGridView</li>
+</ul>
+
+<h3>
+<a id="utility-controls" class="anchor" href="#utility-controls" aria-hidden="true"><span class="octicon octicon-link"></span></a>Utility Controls</h3>
+
+<ul>
+<li>Calendar</li>
+<li>PrintDocument</li>
+</ul>
+
+<h3>
+<a id="dialogs" class="anchor" href="#dialogs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dialogs</h3>
+
+<ul>
+<li>Dialog</li>
+<li>MessageBox</li>
+<li>ColorDialog</li>
+<li>FileDialog*</li>
+<li>FolderBrowserDialog*</li>
+<li>FontDialog</li>
+<li>PageSetupDialog*</li>
+<li>PrintDialog*</li>
+</ul>
+
+<p>*Will probably look into native controls for this functionality on Windows, Linux and Mac, and a simpler explorer-like
+file dialog that you may place into a game.</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/tienery">tienery</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
