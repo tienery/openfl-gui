@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><link href="../../bootstrap-combined.min.css" rel="stylesheet" /><script type="text/javascript" src="../../jquery-1.9.1.min.js"></script><script type="text/javascript" src="../../bootstrap.min.js"></script><link href="../../styles.css" rel="stylesheet" /><link rel="icon" href="../../favicon.ico" type="image/x-icon"></link><script type="text/javascript" src="../../nav.js"></script><script type="text/javascript" src="../../index.js"></script><script type="text/javascript">var dox = {rootPath: "../../",platforms: ["output"]};</script><title>SecurityErrorEvent</title></head><body><div class="navbar navbar-inverse navbar-fixed-top"><div class="navbar-inner"><form class="navbar-search pull-left" id="searchForm"><input id="search" type="text" class="search-query" placeholder="Filter" autocomplete="off"/></form><ul class="nav"><li id="select-platform" class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Platform<b class="caret"></b></a><ul class="dropdown-menu"><li data="all"><a href="#">All Platforms</a></li><li data="output"><a href="#">output</a></li></ul></li></ul></div></div><div id="container"><div id="nav"></div><div id="content"><div class="header"><h1><code><span class="directive">class </span><span class="type">openfl.events.SecurityErrorEvent</span><span class="keyword"> extends</span> <a class="type" href="../../openfl/events/ErrorEvent.html">ErrorEvent</a></code></h1></div><div class="body"><p class="availability">Available on all platforms</p><div class="doc"><p>An object dispatches a SecurityErrorEvent object to report the occurrence
+of a security error. Security errors reported through this class are
+generally from asynchronous operations, such as loading data, in which
+security violations may not manifest immediately. Your event listener can
+access the object's <code>text</code> property to determine what operation
+was attempted and any URLs that were involved. If there are no event
+listeners, the debugger version of Flash Player or the AIR Debug Launcher
+(ADL) application automatically displays an error message that contains the
+contents of the <code>text</code> property. There is one type of security
+error event: <code>SecurityErrorEvent.SECURITY_ERROR</code>.</p><p>Security error events are the final events dispatched for any target
+object. This means that any other events, including generic error events,
+are not dispatched for a target object that experiences a security
+error.</p></div><h2>Class Fields</h2><div class="platform platform-output"><a name="SECURITY_ERROR"></a><h3><p><code><span class="keyword">static </span><span class="keyword">var</span> <a href="#SECURITY_ERROR"><span class="identifier">SECURITY_ERROR</span></a>:<a class="type" href="../../String.html">String</a></code></p></h3><div class="doc"><p>The <code>SecurityErrorEvent.SECURITY_ERROR</code> constant defines the
+value of the <code>type</code> property of a <code>securityError</code>
+event object.</p><p>This event has the following properties:</p></div></div><h2>Instance Fields</h2><div class="platform platform-output"><a name="new"></a><h3><p><code><span class="keyword">function</span> <a href="#new"><span class="identifier">new</span></a>(type:<a class="type" href="../../String.html">String</a>, ?bubbles:<a class="type" href="../../Bool.html">Bool</a> = false, ?cancelable:<a class="type" href="../../Bool.html">Bool</a> = false, ?text:<a class="type" href="../../String.html">String</a> = '', ?id:<a class="type" href="../../Int.html">Int</a> = 0):<a class="type" href="../../Void.html">Void</a></code></p></h3><div class="doc"><p>Creates an Event object that contains information about security error
+events. Event objects are passed as parameters to event listeners.</p><table class="table table-condensed"><tbody><col width="10%"/>  <col width="100%"/><tr><td>type</td><td><p>The type of the event. Event listeners can access this
+information through the inherited <code>type</code>
+property. There is only one type of error event:
+<code>SecurityErrorEvent.SECURITY_ERROR</code>.</p></td></tr><tr><td>bubbles</td><td><p>Determines whether the Event object participates in the
+bubbling stage of the event flow. Event listeners can
+access this information through the inherited
+<code>bubbles</code> property.</p></td></tr><tr><td>cancelable</td><td><p>Determines whether the Event object can be canceled.
+Event listeners can access this information through the
+inherited <code>cancelable</code> property.</p></td></tr><tr><td>text</td><td><p>Text to be displayed as an error message. Event
+listeners can access this information through the
+<code>text</code> property.</p></td></tr><tr><td>id</td><td><p>A reference number to associate with the specific error.</p></td></tr></tbody></table></div></div><div class="platform platform-output"><a name="clone"></a><h3><p><code><span class="keyword">function</span> <a href="#clone"><span class="identifier">clone</span></a>():<a class="type" href="../../openfl/events/Event.html">Event</a></code></p></h3><div class="doc"><p></p></div></div><div class="platform platform-output"><a name="toString"></a><h3><p><code><span class="keyword">function</span> <a href="#toString"><span class="identifier">toString</span></a>():<a class="type" href="../../String.html">String</a></code></p></h3><div class="doc"><p></p></div></div></div></div></div></body></html>

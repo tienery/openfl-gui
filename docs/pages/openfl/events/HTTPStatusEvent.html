@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><link href="../../bootstrap-combined.min.css" rel="stylesheet" /><script type="text/javascript" src="../../jquery-1.9.1.min.js"></script><script type="text/javascript" src="../../bootstrap.min.js"></script><link href="../../styles.css" rel="stylesheet" /><link rel="icon" href="../../favicon.ico" type="image/x-icon"></link><script type="text/javascript" src="../../nav.js"></script><script type="text/javascript" src="../../index.js"></script><script type="text/javascript">var dox = {rootPath: "../../",platforms: ["output"]};</script><title>HTTPStatusEvent</title></head><body><div class="navbar navbar-inverse navbar-fixed-top"><div class="navbar-inner"><form class="navbar-search pull-left" id="searchForm"><input id="search" type="text" class="search-query" placeholder="Filter" autocomplete="off"/></form><ul class="nav"><li id="select-platform" class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Platform<b class="caret"></b></a><ul class="dropdown-menu"><li data="all"><a href="#">All Platforms</a></li><li data="output"><a href="#">output</a></li></ul></li></ul></div></div><div id="container"><div id="nav"></div><div id="content"><div class="header"><h1><code><span class="directive">class </span><span class="type">openfl.events.HTTPStatusEvent</span><span class="keyword"> extends</span> <a class="type" href="../../openfl/events/Event.html">Event</a></code></h1></div><div class="body"><p class="availability">Available on all platforms</p><div class="doc"><p>The application dispatches HTTPStatusEvent objects when a network request
+returns an HTTP status code.</p><p>HTTPStatusEvent objects are always sent before error or completion
+events. An HTTPStatusEvent object does not necessarily indicate an error
+condition; it simply reflects the HTTP status code(if any) that is
+provided by the networking stack. Some Flash Player environments may be
+unable to detect HTTP status codes; a status code of 0 is always reported
+in these cases. </p><p>In Flash Player, there is only one type of HTTPStatus event:
+<code>httpStatus</code>. In the AIR runtime, a FileReference, URLLoader, or
+URLStream can register to listen for an <code>httpResponseStatus</code>,
+which includes <code>responseURL</code> and <code>responseHeaders</code>
+properties. These properties are undefined in a <code>httpStatus</code>
+event.</p></div><h2>Class Fields</h2><div class="platform platform-output"><a name="HTTP_RESPONSE_STATUS"></a><h3><p><code><span class="keyword">static </span><span class="keyword">var</span> <a href="#HTTP_RESPONSE_STATUS"><span class="identifier">HTTP_RESPONSE_STATUS</span></a>:<a class="type" href="../../String.html">String</a></code></p></h3><div class="doc"><p>Unlike the <code>httpStatus</code> event, the
+<code>httpResponseStatus</code> event is delivered before any response
+data. Also, the <code>httpResponseStatus</code> event includes values for
+the <code>responseHeaders</code> and <code>responseURL</code> properties
+(which are undefined for an <code>httpStatus</code> event. Note that the
+<code>httpResponseStatus</code> event(if any) will be sent before(and in
+addition to) any <code>complete</code> or <code>error</code> event.</p><p>The <code>HTTPStatusEvent.HTTP_RESPONSE_STATUS</code> constant defines
+the value of the <code>type</code> property of a
+<code>httpResponseStatus</code> event object. </p><p>This event has the following properties:</p></div></div><div class="platform platform-output"><a name="HTTP_STATUS"></a><h3><p><code><span class="keyword">static </span><span class="keyword">var</span> <a href="#HTTP_STATUS"><span class="identifier">HTTP_STATUS</span></a>:<a class="type" href="../../String.html">String</a></code></p></h3><div class="doc"><p>The <code>HTTPStatusEvent.HTTP_STATUS</code> constant defines the value of
+the <code>type</code> property of a <code>httpStatus</code> event object.</p><p>This event has the following properties:</p></div></div><h2>Instance Fields</h2><div class="platform platform-output"><a name="responseHeaders"></a><h3><p><code><span class="keyword">var</span> <a href="#responseHeaders"><span class="identifier">responseHeaders</span></a>:<a class="type" href="../../Array.html">Array</a>&lt;<a class="type" href="../../Dynamic.html">Dynamic</a>&gt;</code></p></h3><div class="doc"><p>The response headers that the response returned, as an array of
+URLRequestHeader objects.</p></div></div><div class="platform platform-output"><a name="responseURL"></a><h3><p><code><span class="keyword">var</span> <a href="#responseURL"><span class="identifier">responseURL</span></a>:<a class="type" href="../../String.html">String</a></code></p></h3><div class="doc"><p>The URL that the response was returned from. In the case of redirects,
+this will be different from the request URL.</p></div></div><div class="platform platform-output"><a name="status"></a><h3><p><code><span class="keyword">var</span> <a href="#status"><span class="identifier">status</span></a>:<a class="type" href="../../Int.html">Int</a></code></p></h3><div class="doc"><p>The HTTP status code returned by the server. For example, a value of 404
+indicates that the server has not found a match for the requested URI.
+HTTP status codes can be found in sections 10.4 and 10.5 of the HTTP
+specification at &lt;a
+href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html"
+scope="external">http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html</a>.</p><p>If Flash Player or AIR cannot get a status code from the server, or if
+it cannot communicate with the server, the default value of 0 is passed to
+your code. A value of 0 can be generated in any player(for example, if a
+malformed URL is requested), and a value of 0 is always generated by the
+Flash Player plug-in when it is run in the following browsers, which do
+not pass HTTP status codes to the player: Netscape, Mozilla, Safari,
+Opera, and Internet Explorer for the Macintosh.</p></div></div><div class="platform platform-output"><a name="new"></a><h3><p><code><span class="keyword">function</span> <a href="#new"><span class="identifier">new</span></a>(type:<a class="type" href="../../String.html">String</a>, ?bubbles:<a class="type" href="../../Bool.html">Bool</a> = false, ?cancelable:<a class="type" href="../../Bool.html">Bool</a> = false, ?status:<a class="type" href="../../Int.html">Int</a> = 0):<a class="type" href="../../Void.html">Void</a></code></p></h3><div class="doc"><p>Creates an Event object that contains specific information about HTTP
+status events. Event objects are passed as parameters to event listeners.</p><table class="table table-condensed"><tbody><col width="10%"/>  <col width="100%"/><tr><td>type</td><td><p>The type of the event. Event listeners can access this
+information through the inherited <code>type</code>
+property. There is only one type of HTTPStatus event:
+<code>HTTPStatusEvent.HTTP_STATUS</code>.</p></td></tr><tr><td>bubbles</td><td><p>Determines whether the Event object participates in the
+bubbling stage of the event flow. Event listeners can
+access this information through the inherited
+<code>bubbles</code> property.</p></td></tr><tr><td>cancelable</td><td><p>Determines whether the Event object can be canceled.
+Event listeners can access this information through the
+inherited <code>cancelable</code> property.</p></td></tr><tr><td>status</td><td><p>Numeric status. Event listeners can access this
+information through the <code>status</code> property.</p></td></tr></tbody></table></div></div></div></div></div></body></html>
