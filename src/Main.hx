@@ -21,6 +21,13 @@ import openfl.Lib;
 class Main extends Sprite 
 {
 
+	#if doc_gen
+	public static function main()
+	{
+		
+	}
+	#end
+	
 	public function new() 
 	{
 		super();
@@ -35,11 +42,6 @@ class Main extends Sprite
 		
 		var rect:Rectangle = new Rectangle(30, 30, 100, 100, "inheritTest");
 		rect.draw(graphics, true);
-		
-		//graphics.lineStyle(2, Color.red().value);
-		//graphics.lineGradientStyle(GradientType.LINEAR, [Color.red().value, Color.darkSeaGreen().value], [1, 1], [0, 1]);
-		//graphics.beginFill(Color.darkSeaGreen().value);
-		//graphics.drawRect(30, 30, 100, 100);
 		
 		addChild(new FPS(2, 2, 0xFF0000));
 	}

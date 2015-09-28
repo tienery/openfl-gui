@@ -33,6 +33,9 @@ class Color
 	 */
 	public var valueWithAlpha:UInt;
 	
+	/**
+	 * Returns only the alpha value extracted from `valueWithAlpha` as a `Float` percentage from 0-1.
+	 */
 	public var alpha(get, never):Float;
 	function get_alpha()
 	{
@@ -44,12 +47,26 @@ class Color
 	 */
 	public var value:Int;
 	
+	/**
+	 * Creates a `Color` type with the given values.
+	 * @param	red		The `red` channel identifying a range from 0-255, or a hexadecimal value up to 0xFF.
+	 * @param	green	The `green` channel identifying a range from 0-255, or a hexadecimal value up to 0xFF.
+	 * @param	blue	The `blue` channel identifying a range from 0-255, or a hexadecimal value up to 0xFF.
+	 * @param	alpha	The `alpha` channel identifying a range from 0-255, or a hexadecimal value up to 0xFF.
+	 */
 	public function new(red:Int = 0x00, green:Int = 0x00, blue:Int = 0x00, alpha:Int = 0xFF) 
 	{
 		valueWithAlpha = ((alpha << 24) | (red << 16) | (green << 8) | (blue << 0)) & 0xFFFFFFFF;
 		value = ((red << 16) | (green << 8) | (blue << 0)) & 0xFFFFFF;
 	}
 	
+	/**
+	 * Converts the hexadecimal equivalent from a string as a `Color`.
+	 * @param	hex		The string value that represents a hexadecimal value. If the alpha value is excluded, the
+	 * 					generated alpha value defaults to 0xFF, else the included value is extracted from the given
+	 * 					`hex` appropriately.
+	 * @return	Returns a `Color` type representing the given `hex` value.
+	 */
 	public static inline function colorFromHex(hex:String):Color
 	{
 		var value = Std.parseInt(hex);
@@ -68,6 +85,12 @@ class Color
 		return col;
 	}
 	
+	/**
+	 * Gets a color by a known name.
+	 * @param	name	The name of the color. This must be the same as any one of the function names listed
+	 * 					as static functions. Names are case-sensitive.
+	 * @return	Returns a `Color` type with its respective values.
+	 */
 	public static inline function colorByName(name:String):Color
 	{
 		var fn:Dynamic = Reflect.field(Color, name);
