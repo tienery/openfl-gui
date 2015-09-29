@@ -4,7 +4,7 @@
 	"license": "MIT",
 	"tags": ["gui", "openfl"],
 	"description": "A rich selection of GUI components for OpenFL.",
-	"version": "2.0.0-alpha.7",
+	"version": "2.0.1-alpha.8",
 	"classPath": "src/",
 	"contributors": ["tienery"],
 	"dependencies": {
