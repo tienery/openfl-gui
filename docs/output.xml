@@ -7770,25 +7770,6 @@
 </f></makeStack>
 		<haxe_doc>Get informations about the call stack.</haxe_doc>
 	</class>
-	<abstract path="haxe.Function" params="" file="C:\HaxeToolkit\haxe\std/haxe/Constraints.hx" module="haxe.Constraints">
-		<this><d/></this>
-		<haxe_doc>This type unifies with any function type.
-
-	It is intended to be used as a type parameter constraint. If used as a real
-	type, the underlying type will be `Dynamic`.</haxe_doc>
-		<impl><class path="haxe._Constraints.Function_Impl_" params="" file="C:\HaxeToolkit\haxe\std/haxe/Constraints.hx" private="1" module="haxe.Constraints" extern="1"/></impl>
-	</abstract>
-	<class path="haxe._Constraints.Function_Impl_" params="" file="C:\HaxeToolkit\haxe\std/haxe/Constraints.hx" private="1" module="haxe.Constraints" extern="1"/>
-	<abstract path="haxe.FlatEnum" params="" file="C:\HaxeToolkit\haxe\std/haxe/Constraints.hx" module="haxe.Constraints">
-		<this><d/></this>
-		<haxe_doc>This type unifies with an enum instance if all constructors of the enum
-	require no arguments.
-
-	It is intended to be used as a type parameter constraint. If used as a real
-	type, the underlying type will be `Dynamic`.</haxe_doc>
-		<impl><class path="haxe._Constraints.FlatEnum_Impl_" params="" file="C:\HaxeToolkit\haxe\std/haxe/Constraints.hx" private="1" module="haxe.Constraints" extern="1"/></impl>
-	</abstract>
-	<class path="haxe._Constraints.FlatEnum_Impl_" params="" file="C:\HaxeToolkit\haxe\std/haxe/Constraints.hx" private="1" module="haxe.Constraints" extern="1"/>
 	<abstract path="haxe.EnumFlags" params="T" file="C:\HaxeToolkit\haxe\std/haxe/EnumFlags.hx">
 		<this><x path="Int"/></this>
 		<haxe_doc>A typed interface for bit flags. This is not a real object, only a typed
@@ -44581,7 +44562,7 @@
 </f></new>
 	</class>
 	<class path="openfl.canvas.Color" params="" file="../openfl/canvas/Color.hx">
-		<colorFromHex public="1" get="inline" set="null" line="70" static="1">
+		<colorFromHex public="1" get="inline" set="null" line="69" static="1">
 			<f a="hex">
 				<c path="String"/>
 				<c path="openfl.canvas.Color"/>
@@ -44592,7 +44573,7 @@
 	 * 					`hex` appropriately.
 	 * @return	Returns a `Color` type representing the given `hex` value.</haxe_doc>
 		</colorFromHex>
-		<colorByName public="1" get="inline" set="null" line="94" static="1">
+		<colorByName public="1" get="inline" set="null" line="93" static="1">
 			<f a="name">
 				<c path="String"/>
 				<c path="openfl.canvas.Color"/>
@@ -44602,146 +44583,566 @@
 	 * 					as static functions. Names are case-sensitive.
 	 * @return	Returns a `Color` type with its respective values.</haxe_doc>
 		</colorByName>
-		<aliceBlue public="1" get="inline" set="null" line="114" static="1"><f a=""><c path="openfl.canvas.Color"/></f></aliceBlue>
-		<antiqueWhite public="1" get="inline" set="null" line="115" static="1"><f a=""><c path="openfl.canvas.Color"/></f></antiqueWhite>
-		<aqua public="1" get="inline" set="null" line="116" static="1"><f a=""><c path="openfl.canvas.Color"/></f></aqua>
-		<aquamarine public="1" get="inline" set="null" line="117" static="1"><f a=""><c path="openfl.canvas.Color"/></f></aquamarine>
-		<azure public="1" get="inline" set="null" line="118" static="1"><f a=""><c path="openfl.canvas.Color"/></f></azure>
-		<beige public="1" get="inline" set="null" line="119" static="1"><f a=""><c path="openfl.canvas.Color"/></f></beige>
-		<bisque public="1" get="inline" set="null" line="120" static="1"><f a=""><c path="openfl.canvas.Color"/></f></bisque>
-		<black public="1" get="inline" set="null" line="121" static="1"><f a=""><c path="openfl.canvas.Color"/></f></black>
-		<blanchedAlmond public="1" get="inline" set="null" line="122" static="1"><f a=""><c path="openfl.canvas.Color"/></f></blanchedAlmond>
-		<blue public="1" get="inline" set="null" line="123" static="1"><f a=""><c path="openfl.canvas.Color"/></f></blue>
-		<blueViolet public="1" get="inline" set="null" line="124" static="1"><f a=""><c path="openfl.canvas.Color"/></f></blueViolet>
-		<brown public="1" get="inline" set="null" line="125" static="1"><f a=""><c path="openfl.canvas.Color"/></f></brown>
-		<burlyWood public="1" get="inline" set="null" line="126" static="1"><f a=""><c path="openfl.canvas.Color"/></f></burlyWood>
-		<cadetBlue public="1" get="inline" set="null" line="127" static="1"><f a=""><c path="openfl.canvas.Color"/></f></cadetBlue>
-		<chartreuse public="1" get="inline" set="null" line="128" static="1"><f a=""><c path="openfl.canvas.Color"/></f></chartreuse>
-		<chocolate public="1" get="inline" set="null" line="129" static="1"><f a=""><c path="openfl.canvas.Color"/></f></chocolate>
-		<coral public="1" get="inline" set="null" line="130" static="1"><f a=""><c path="openfl.canvas.Color"/></f></coral>
-		<cornflowerBlue public="1" get="inline" set="null" line="131" static="1"><f a=""><c path="openfl.canvas.Color"/></f></cornflowerBlue>
-		<cornsilk public="1" get="inline" set="null" line="132" static="1"><f a=""><c path="openfl.canvas.Color"/></f></cornsilk>
-		<crimson public="1" get="inline" set="null" line="133" static="1"><f a=""><c path="openfl.canvas.Color"/></f></crimson>
-		<cyan public="1" get="inline" set="null" line="134" static="1"><f a=""><c path="openfl.canvas.Color"/></f></cyan>
-		<darkBlue public="1" get="inline" set="null" line="135" static="1"><f a=""><c path="openfl.canvas.Color"/></f></darkBlue>
-		<darkCyan public="1" get="inline" set="null" line="136" static="1"><f a=""><c path="openfl.canvas.Color"/></f></darkCyan>
-		<darkGoldrenrod public="1" get="inline" set="null" line="137" static="1"><f a=""><c path="openfl.canvas.Color"/></f></darkGoldrenrod>
-		<darkGray public="1" get="inline" set="null" line="138" static="1"><f a=""><c path="openfl.canvas.Color"/></f></darkGray>
-		<darkGreen public="1" get="inline" set="null" line="139" static="1"><f a=""><c path="openfl.canvas.Color"/></f></darkGreen>
-		<darkKhaki public="1" get="inline" set="null" line="140" static="1"><f a=""><c path="openfl.canvas.Color"/></f></darkKhaki>
-		<darkMagenta public="1" get="inline" set="null" line="141" static="1"><f a=""><c path="openfl.canvas.Color"/></f></darkMagenta>
-		<darkOliveGreen public="1" get="inline" set="null" line="142" static="1"><f a=""><c path="openfl.canvas.Color"/></f></darkOliveGreen>
-		<darkOrange public="1" get="inline" set="null" line="143" static="1"><f a=""><c path="openfl.canvas.Color"/></f></darkOrange>
-		<darkOrchid public="1" get="inline" set="null" line="144" static="1"><f a=""><c path="openfl.canvas.Color"/></f></darkOrchid>
-		<darkRed public="1" get="inline" set="null" line="145" static="1"><f a=""><c path="openfl.canvas.Color"/></f></darkRed>
-		<darkSalmon public="1" get="inline" set="null" line="146" static="1"><f a=""><c path="openfl.canvas.Color"/></f></darkSalmon>
-		<darkSeaGreen public="1" get="inline" set="null" line="147" static="1"><f a=""><c path="openfl.canvas.Color"/></f></darkSeaGreen>
-		<darkSlateBlue public="1" get="inline" set="null" line="148" static="1"><f a=""><c path="openfl.canvas.Color"/></f></darkSlateBlue>
-		<darkSlateGray public="1" get="inline" set="null" line="149" static="1"><f a=""><c path="openfl.canvas.Color"/></f></darkSlateGray>
-		<darkTurquoise public="1" get="inline" set="null" line="150" static="1"><f a=""><c path="openfl.canvas.Color"/></f></darkTurquoise>
-		<darkViolet public="1" get="inline" set="null" line="151" static="1"><f a=""><c path="openfl.canvas.Color"/></f></darkViolet>
-		<deepPink public="1" get="inline" set="null" line="152" static="1"><f a=""><c path="openfl.canvas.Color"/></f></deepPink>
-		<deepSkyBlue public="1" get="inline" set="null" line="153" static="1"><f a=""><c path="openfl.canvas.Color"/></f></deepSkyBlue>
-		<dimGray public="1" get="inline" set="null" line="154" static="1"><f a=""><c path="openfl.canvas.Color"/></f></dimGray>
-		<dodgerBlue public="1" get="inline" set="null" line="155" static="1"><f a=""><c path="openfl.canvas.Color"/></f></dodgerBlue>
-		<firebrick public="1" get="inline" set="null" line="156" static="1"><f a=""><c path="openfl.canvas.Color"/></f></firebrick>
-		<floralWhite public="1" get="inline" set="null" line="157" static="1"><f a=""><c path="openfl.canvas.Color"/></f></floralWhite>
-		<forestGreen public="1" get="inline" set="null" line="158" static="1"><f a=""><c path="openfl.canvas.Color"/></f></forestGreen>
-		<fuchsia public="1" get="inline" set="null" line="159" static="1"><f a=""><c path="openfl.canvas.Color"/></f></fuchsia>
-		<gainsboro public="1" get="inline" set="null" line="160" static="1"><f a=""><c path="openfl.canvas.Color"/></f></gainsboro>
-		<ghostWhite public="1" get="inline" set="null" line="161" static="1"><f a=""><c path="openfl.canvas.Color"/></f></ghostWhite>
-		<gold public="1" get="inline" set="null" line="162" static="1"><f a=""><c path="openfl.canvas.Color"/></f></gold>
-		<goldenrod public="1" get="inline" set="null" line="163" static="1"><f a=""><c path="openfl.canvas.Color"/></f></goldenrod>
-		<gray public="1" get="inline" set="null" line="164" static="1"><f a=""><c path="openfl.canvas.Color"/></f></gray>
-		<green public="1" get="inline" set="null" line="165" static="1"><f a=""><c path="openfl.canvas.Color"/></f></green>
-		<greenYellow public="1" get="inline" set="null" line="166" static="1"><f a=""><c path="openfl.canvas.Color"/></f></greenYellow>
-		<honeydew public="1" get="inline" set="null" line="167" static="1"><f a=""><c path="openfl.canvas.Color"/></f></honeydew>
-		<hotPink public="1" get="inline" set="null" line="168" static="1"><f a=""><c path="openfl.canvas.Color"/></f></hotPink>
-		<indianRed public="1" get="inline" set="null" line="169" static="1"><f a=""><c path="openfl.canvas.Color"/></f></indianRed>
-		<indigo public="1" get="inline" set="null" line="170" static="1"><f a=""><c path="openfl.canvas.Color"/></f></indigo>
-		<ivory public="1" get="inline" set="null" line="171" static="1"><f a=""><c path="openfl.canvas.Color"/></f></ivory>
-		<khaki public="1" get="inline" set="null" line="172" static="1"><f a=""><c path="openfl.canvas.Color"/></f></khaki>
-		<lavender public="1" get="inline" set="null" line="173" static="1"><f a=""><c path="openfl.canvas.Color"/></f></lavender>
-		<lavenderBlush public="1" get="inline" set="null" line="174" static="1"><f a=""><c path="openfl.canvas.Color"/></f></lavenderBlush>
-		<lawnGreen public="1" get="inline" set="null" line="175" static="1"><f a=""><c path="openfl.canvas.Color"/></f></lawnGreen>
-		<lemonChiffon public="1" get="inline" set="null" line="176" static="1"><f a=""><c path="openfl.canvas.Color"/></f></lemonChiffon>
-		<lightBlue public="1" get="inline" set="null" line="177" static="1"><f a=""><c path="openfl.canvas.Color"/></f></lightBlue>
-		<lightCoral public="1" get="inline" set="null" line="178" static="1"><f a=""><c path="openfl.canvas.Color"/></f></lightCoral>
-		<lightCyan public="1" get="inline" set="null" line="179" static="1"><f a=""><c path="openfl.canvas.Color"/></f></lightCyan>
-		<lightGoldenrodYellow public="1" get="inline" set="null" line="180" static="1"><f a=""><c path="openfl.canvas.Color"/></f></lightGoldenrodYellow>
-		<lightGray public="1" get="inline" set="null" line="181" static="1"><f a=""><c path="openfl.canvas.Color"/></f></lightGray>
-		<lightGreen public="1" get="inline" set="null" line="182" static="1"><f a=""><c path="openfl.canvas.Color"/></f></lightGreen>
-		<lightPink public="1" get="inline" set="null" line="183" static="1"><f a=""><c path="openfl.canvas.Color"/></f></lightPink>
-		<lightSalmon public="1" get="inline" set="null" line="184" static="1"><f a=""><c path="openfl.canvas.Color"/></f></lightSalmon>
-		<lightSeaGreen public="1" get="inline" set="null" line="185" static="1"><f a=""><c path="openfl.canvas.Color"/></f></lightSeaGreen>
-		<lightSkyBlue public="1" get="inline" set="null" line="186" static="1"><f a=""><c path="openfl.canvas.Color"/></f></lightSkyBlue>
-		<lightSlateGray public="1" get="inline" set="null" line="187" static="1"><f a=""><c path="openfl.canvas.Color"/></f></lightSlateGray>
-		<lightSteelBlue public="1" get="inline" set="null" line="188" static="1"><f a=""><c path="openfl.canvas.Color"/></f></lightSteelBlue>
-		<lightYellow public="1" get="inline" set="null" line="189" static="1"><f a=""><c path="openfl.canvas.Color"/></f></lightYellow>
-		<lime public="1" get="inline" set="null" line="190" static="1"><f a=""><c path="openfl.canvas.Color"/></f></lime>
-		<limeGreen public="1" get="inline" set="null" line="191" static="1"><f a=""><c path="openfl.canvas.Color"/></f></limeGreen>
-		<linen public="1" get="inline" set="null" line="192" static="1"><f a=""><c path="openfl.canvas.Color"/></f></linen>
-		<magenta public="1" get="inline" set="null" line="193" static="1"><f a=""><c path="openfl.canvas.Color"/></f></magenta>
-		<maroon public="1" get="inline" set="null" line="194" static="1"><f a=""><c path="openfl.canvas.Color"/></f></maroon>
-		<mediumAquamarine public="1" get="inline" set="null" line="195" static="1"><f a=""><c path="openfl.canvas.Color"/></f></mediumAquamarine>
-		<mediumBlue public="1" get="inline" set="null" line="196" static="1"><f a=""><c path="openfl.canvas.Color"/></f></mediumBlue>
-		<mediumOrchid public="1" get="inline" set="null" line="197" static="1"><f a=""><c path="openfl.canvas.Color"/></f></mediumOrchid>
-		<mediumPurple public="1" get="inline" set="null" line="198" static="1"><f a=""><c path="openfl.canvas.Color"/></f></mediumPurple>
-		<mediumSeaGreen public="1" get="inline" set="null" line="199" static="1"><f a=""><c path="openfl.canvas.Color"/></f></mediumSeaGreen>
-		<mediumSlateBlue public="1" get="inline" set="null" line="200" static="1"><f a=""><c path="openfl.canvas.Color"/></f></mediumSlateBlue>
-		<mediumSpringGreen public="1" get="inline" set="null" line="201" static="1"><f a=""><c path="openfl.canvas.Color"/></f></mediumSpringGreen>
-		<mediumTurquoise public="1" get="inline" set="null" line="202" static="1"><f a=""><c path="openfl.canvas.Color"/></f></mediumTurquoise>
-		<mediumVioletRed public="1" get="inline" set="null" line="203" static="1"><f a=""><c path="openfl.canvas.Color"/></f></mediumVioletRed>
-		<midnightBlue public="1" get="inline" set="null" line="204" static="1"><f a=""><c path="openfl.canvas.Color"/></f></midnightBlue>
-		<mintCream public="1" get="inline" set="null" line="205" static="1"><f a=""><c path="openfl.canvas.Color"/></f></mintCream>
-		<mistyRose public="1" get="inline" set="null" line="206" static="1"><f a=""><c path="openfl.canvas.Color"/></f></mistyRose>
-		<moccasin public="1" get="inline" set="null" line="207" static="1"><f a=""><c path="openfl.canvas.Color"/></f></moccasin>
-		<navajoWhite public="1" get="inline" set="null" line="208" static="1"><f a=""><c path="openfl.canvas.Color"/></f></navajoWhite>
-		<navy public="1" get="inline" set="null" line="209" static="1"><f a=""><c path="openfl.canvas.Color"/></f></navy>
-		<oldLace public="1" get="inline" set="null" line="210" static="1"><f a=""><c path="openfl.canvas.Color"/></f></oldLace>
-		<olive public="1" get="inline" set="null" line="211" static="1"><f a=""><c path="openfl.canvas.Color"/></f></olive>
-		<oliveDrab public="1" get="inline" set="null" line="212" static="1"><f a=""><c path="openfl.canvas.Color"/></f></oliveDrab>
-		<orange public="1" get="inline" set="null" line="213" static="1"><f a=""><c path="openfl.canvas.Color"/></f></orange>
-		<orangeRed public="1" get="inline" set="null" line="214" static="1"><f a=""><c path="openfl.canvas.Color"/></f></orangeRed>
-		<orchid public="1" get="inline" set="null" line="215" static="1"><f a=""><c path="openfl.canvas.Color"/></f></orchid>
-		<paleGoldenrod public="1" get="inline" set="null" line="216" static="1"><f a=""><c path="openfl.canvas.Color"/></f></paleGoldenrod>
-		<paleGreen public="1" get="inline" set="null" line="217" static="1"><f a=""><c path="openfl.canvas.Color"/></f></paleGreen>
-		<paleTurquoise public="1" get="inline" set="null" line="218" static="1"><f a=""><c path="openfl.canvas.Color"/></f></paleTurquoise>
-		<paleVioletRed public="1" get="inline" set="null" line="219" static="1"><f a=""><c path="openfl.canvas.Color"/></f></paleVioletRed>
-		<papayaWhip public="1" get="inline" set="null" line="220" static="1"><f a=""><c path="openfl.canvas.Color"/></f></papayaWhip>
-		<peachPuff public="1" get="inline" set="null" line="221" static="1"><f a=""><c path="openfl.canvas.Color"/></f></peachPuff>
-		<peru public="1" get="inline" set="null" line="222" static="1"><f a=""><c path="openfl.canvas.Color"/></f></peru>
-		<pink public="1" get="inline" set="null" line="223" static="1"><f a=""><c path="openfl.canvas.Color"/></f></pink>
-		<plum public="1" get="inline" set="null" line="224" static="1"><f a=""><c path="openfl.canvas.Color"/></f></plum>
-		<powderBlue public="1" get="inline" set="null" line="225" static="1"><f a=""><c path="openfl.canvas.Color"/></f></powderBlue>
-		<purple public="1" get="inline" set="null" line="226" static="1"><f a=""><c path="openfl.canvas.Color"/></f></purple>
-		<red public="1" get="inline" set="null" line="227" static="1"><f a=""><c path="openfl.canvas.Color"/></f></red>
-		<rosyBrown public="1" get="inline" set="null" line="228" static="1"><f a=""><c path="openfl.canvas.Color"/></f></rosyBrown>
-		<royalBlue public="1" get="inline" set="null" line="229" static="1"><f a=""><c path="openfl.canvas.Color"/></f></royalBlue>
-		<saddleBrown public="1" get="inline" set="null" line="230" static="1"><f a=""><c path="openfl.canvas.Color"/></f></saddleBrown>
-		<salmon public="1" get="inline" set="null" line="231" static="1"><f a=""><c path="openfl.canvas.Color"/></f></salmon>
-		<sandyBrown public="1" get="inline" set="null" line="232" static="1"><f a=""><c path="openfl.canvas.Color"/></f></sandyBrown>
-		<seaGreen public="1" get="inline" set="null" line="233" static="1"><f a=""><c path="openfl.canvas.Color"/></f></seaGreen>
-		<seaShell public="1" get="inline" set="null" line="234" static="1"><f a=""><c path="openfl.canvas.Color"/></f></seaShell>
-		<sienna public="1" get="inline" set="null" line="235" static="1"><f a=""><c path="openfl.canvas.Color"/></f></sienna>
-		<silver public="1" get="inline" set="null" line="236" static="1"><f a=""><c path="openfl.canvas.Color"/></f></silver>
-		<skyBlue public="1" get="inline" set="null" line="237" static="1"><f a=""><c path="openfl.canvas.Color"/></f></skyBlue>
-		<slateBlue public="1" get="inline" set="null" line="238" static="1"><f a=""><c path="openfl.canvas.Color"/></f></slateBlue>
-		<slateGray public="1" get="inline" set="null" line="239" static="1"><f a=""><c path="openfl.canvas.Color"/></f></slateGray>
-		<snow public="1" get="inline" set="null" line="240" static="1"><f a=""><c path="openfl.canvas.Color"/></f></snow>
-		<springGreen public="1" get="inline" set="null" line="241" static="1"><f a=""><c path="openfl.canvas.Color"/></f></springGreen>
-		<steelBlue public="1" get="inline" set="null" line="242" static="1"><f a=""><c path="openfl.canvas.Color"/></f></steelBlue>
-		<tan public="1" get="inline" set="null" line="243" static="1"><f a=""><c path="openfl.canvas.Color"/></f></tan>
-		<teal public="1" get="inline" set="null" line="244" static="1"><f a=""><c path="openfl.canvas.Color"/></f></teal>
-		<thistle public="1" get="inline" set="null" line="245" static="1"><f a=""><c path="openfl.canvas.Color"/></f></thistle>
-		<tomato public="1" get="inline" set="null" line="246" static="1"><f a=""><c path="openfl.canvas.Color"/></f></tomato>
-		<turquoise public="1" get="inline" set="null" line="247" static="1"><f a=""><c path="openfl.canvas.Color"/></f></turquoise>
-		<violet public="1" get="inline" set="null" line="248" static="1"><f a=""><c path="openfl.canvas.Color"/></f></violet>
-		<wheat public="1" get="inline" set="null" line="249" static="1"><f a=""><c path="openfl.canvas.Color"/></f></wheat>
-		<white public="1" get="inline" set="null" line="250" static="1"><f a=""><c path="openfl.canvas.Color"/></f></white>
-		<whiteSmoke public="1" get="inline" set="null" line="251" static="1"><f a=""><c path="openfl.canvas.Color"/></f></whiteSmoke>
-		<yellow public="1" get="inline" set="null" line="252" static="1"><f a=""><c path="openfl.canvas.Color"/></f></yellow>
-		<yellowGreen public="1" get="inline" set="null" line="253" static="1"><f a=""><c path="openfl.canvas.Color"/></f></yellowGreen>
+		<aliceBlue public="1" get="inline" set="null" line="116" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xF0F8FF.</haxe_doc>
+		</aliceBlue>
+		<antiqueWhite public="1" get="inline" set="null" line="120" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFAEBD7.</haxe_doc>
+		</antiqueWhite>
+		<aqua public="1" get="inline" set="null" line="124" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x00FFFF.</haxe_doc>
+		</aqua>
+		<aquamarine public="1" get="inline" set="null" line="128" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x7FFFD4.</haxe_doc>
+		</aquamarine>
+		<azure public="1" get="inline" set="null" line="132" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xF0FFFF.</haxe_doc>
+		</azure>
+		<beige public="1" get="inline" set="null" line="136" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xF5F5DC.</haxe_doc>
+		</beige>
+		<bisque public="1" get="inline" set="null" line="140" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFFE4C4.</haxe_doc>
+		</bisque>
+		<black public="1" get="inline" set="null" line="144" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x000000.</haxe_doc>
+		</black>
+		<blanchedAlmond public="1" get="inline" set="null" line="148" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFFEBCD.</haxe_doc>
+		</blanchedAlmond>
+		<blue public="1" get="inline" set="null" line="152" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x0000FF.</haxe_doc>
+		</blue>
+		<blueViolet public="1" get="inline" set="null" line="156" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x8A2BE2.</haxe_doc>
+		</blueViolet>
+		<brown public="1" get="inline" set="null" line="160" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xA52A2A.</haxe_doc>
+		</brown>
+		<burlyWood public="1" get="inline" set="null" line="164" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xDEB887.</haxe_doc>
+		</burlyWood>
+		<cadetBlue public="1" get="inline" set="null" line="168" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x5F9EA0.</haxe_doc>
+		</cadetBlue>
+		<chartreuse public="1" get="inline" set="null" line="172" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x7FFF00.</haxe_doc>
+		</chartreuse>
+		<chocolate public="1" get="inline" set="null" line="176" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xD2691E.</haxe_doc>
+		</chocolate>
+		<coral public="1" get="inline" set="null" line="180" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFF7F50.</haxe_doc>
+		</coral>
+		<cornflowerBlue public="1" get="inline" set="null" line="184" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x6495ED.</haxe_doc>
+		</cornflowerBlue>
+		<cornsilk public="1" get="inline" set="null" line="188" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFFF8DC.</haxe_doc>
+		</cornsilk>
+		<crimson public="1" get="inline" set="null" line="192" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xDC143C.</haxe_doc>
+		</crimson>
+		<cyan public="1" get="inline" set="null" line="196" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x00FFFF.</haxe_doc>
+		</cyan>
+		<darkBlue public="1" get="inline" set="null" line="200" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x00008B.</haxe_doc>
+		</darkBlue>
+		<darkCyan public="1" get="inline" set="null" line="204" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x008B8B.</haxe_doc>
+		</darkCyan>
+		<darkGoldrenrod public="1" get="inline" set="null" line="208" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xB8860B.</haxe_doc>
+		</darkGoldrenrod>
+		<darkGray public="1" get="inline" set="null" line="212" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xA9A9A9.</haxe_doc>
+		</darkGray>
+		<darkGreen public="1" get="inline" set="null" line="216" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x006400.</haxe_doc>
+		</darkGreen>
+		<darkKhaki public="1" get="inline" set="null" line="220" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xBDB76B.</haxe_doc>
+		</darkKhaki>
+		<darkMagenta public="1" get="inline" set="null" line="224" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x8B008B.</haxe_doc>
+		</darkMagenta>
+		<darkOliveGreen public="1" get="inline" set="null" line="228" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x556B2F.</haxe_doc>
+		</darkOliveGreen>
+		<darkOrange public="1" get="inline" set="null" line="232" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFF8C00.</haxe_doc>
+		</darkOrange>
+		<darkOrchid public="1" get="inline" set="null" line="236" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x9932CC.</haxe_doc>
+		</darkOrchid>
+		<darkRed public="1" get="inline" set="null" line="240" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x8B0000.</haxe_doc>
+		</darkRed>
+		<darkSalmon public="1" get="inline" set="null" line="244" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xE9967A.</haxe_doc>
+		</darkSalmon>
+		<darkSeaGreen public="1" get="inline" set="null" line="248" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x8FBC8F.</haxe_doc>
+		</darkSeaGreen>
+		<darkSlateBlue public="1" get="inline" set="null" line="252" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x483D8B.</haxe_doc>
+		</darkSlateBlue>
+		<darkSlateGray public="1" get="inline" set="null" line="256" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x2F4F4F.</haxe_doc>
+		</darkSlateGray>
+		<darkTurquoise public="1" get="inline" set="null" line="260" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x00CED1.</haxe_doc>
+		</darkTurquoise>
+		<darkViolet public="1" get="inline" set="null" line="264" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x9400D3.</haxe_doc>
+		</darkViolet>
+		<deepPink public="1" get="inline" set="null" line="268" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFF1493.</haxe_doc>
+		</deepPink>
+		<deepSkyBlue public="1" get="inline" set="null" line="272" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x00BFFF.</haxe_doc>
+		</deepSkyBlue>
+		<dimGray public="1" get="inline" set="null" line="276" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x696969.</haxe_doc>
+		</dimGray>
+		<dodgerBlue public="1" get="inline" set="null" line="280" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x1E90FF.</haxe_doc>
+		</dodgerBlue>
+		<firebrick public="1" get="inline" set="null" line="284" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xB22222.</haxe_doc>
+		</firebrick>
+		<floralWhite public="1" get="inline" set="null" line="288" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFFFAF0.</haxe_doc>
+		</floralWhite>
+		<forestGreen public="1" get="inline" set="null" line="292" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x228B22.</haxe_doc>
+		</forestGreen>
+		<fuchsia public="1" get="inline" set="null" line="296" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFF00FF.</haxe_doc>
+		</fuchsia>
+		<gainsboro public="1" get="inline" set="null" line="300" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xDCDCDC.</haxe_doc>
+		</gainsboro>
+		<ghostWhite public="1" get="inline" set="null" line="304" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xF8F8FF.</haxe_doc>
+		</ghostWhite>
+		<gold public="1" get="inline" set="null" line="308" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFFD700.</haxe_doc>
+		</gold>
+		<goldenrod public="1" get="inline" set="null" line="312" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xDAA520.</haxe_doc>
+		</goldenrod>
+		<gray public="1" get="inline" set="null" line="316" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x808080.</haxe_doc>
+		</gray>
+		<green public="1" get="inline" set="null" line="320" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x008000.</haxe_doc>
+		</green>
+		<greenYellow public="1" get="inline" set="null" line="324" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xADFF2F.</haxe_doc>
+		</greenYellow>
+		<honeydew public="1" get="inline" set="null" line="328" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xF0FFF0.</haxe_doc>
+		</honeydew>
+		<hotPink public="1" get="inline" set="null" line="332" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFF69B4.</haxe_doc>
+		</hotPink>
+		<indianRed public="1" get="inline" set="null" line="336" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xCD5C5C.</haxe_doc>
+		</indianRed>
+		<indigo public="1" get="inline" set="null" line="340" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x4B0082.</haxe_doc>
+		</indigo>
+		<ivory public="1" get="inline" set="null" line="344" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFFFFF0.</haxe_doc>
+		</ivory>
+		<khaki public="1" get="inline" set="null" line="348" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xF0E68C.</haxe_doc>
+		</khaki>
+		<lavender public="1" get="inline" set="null" line="352" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xE6E6FA.</haxe_doc>
+		</lavender>
+		<lavenderBlush public="1" get="inline" set="null" line="356" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFFF0F5.</haxe_doc>
+		</lavenderBlush>
+		<lawnGreen public="1" get="inline" set="null" line="360" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x7CFC00.</haxe_doc>
+		</lawnGreen>
+		<lemonChiffon public="1" get="inline" set="null" line="364" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFFFACD.</haxe_doc>
+		</lemonChiffon>
+		<lightBlue public="1" get="inline" set="null" line="368" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xADD8E6.</haxe_doc>
+		</lightBlue>
+		<lightCoral public="1" get="inline" set="null" line="372" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xF08080.</haxe_doc>
+		</lightCoral>
+		<lightCyan public="1" get="inline" set="null" line="376" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xE0FFFF.</haxe_doc>
+		</lightCyan>
+		<lightGoldenrodYellow public="1" get="inline" set="null" line="380" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFAFAD2.</haxe_doc>
+		</lightGoldenrodYellow>
+		<lightGray public="1" get="inline" set="null" line="384" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xD3D3D3.</haxe_doc>
+		</lightGray>
+		<lightGreen public="1" get="inline" set="null" line="388" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x90EE90.</haxe_doc>
+		</lightGreen>
+		<lightPink public="1" get="inline" set="null" line="392" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFFB6C1.</haxe_doc>
+		</lightPink>
+		<lightSalmon public="1" get="inline" set="null" line="396" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFFA07A.</haxe_doc>
+		</lightSalmon>
+		<lightSeaGreen public="1" get="inline" set="null" line="400" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x20B2AA.</haxe_doc>
+		</lightSeaGreen>
+		<lightSkyBlue public="1" get="inline" set="null" line="404" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x87CEFA.</haxe_doc>
+		</lightSkyBlue>
+		<lightSlateGray public="1" get="inline" set="null" line="408" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x778899.</haxe_doc>
+		</lightSlateGray>
+		<lightSteelBlue public="1" get="inline" set="null" line="412" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xB0C4DE.</haxe_doc>
+		</lightSteelBlue>
+		<lightYellow public="1" get="inline" set="null" line="416" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFFFFE0.</haxe_doc>
+		</lightYellow>
+		<lime public="1" get="inline" set="null" line="420" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x00FF00.</haxe_doc>
+		</lime>
+		<limeGreen public="1" get="inline" set="null" line="424" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x32CD32.</haxe_doc>
+		</limeGreen>
+		<linen public="1" get="inline" set="null" line="428" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFAF0E6.</haxe_doc>
+		</linen>
+		<magenta public="1" get="inline" set="null" line="432" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFF00FF.</haxe_doc>
+		</magenta>
+		<maroon public="1" get="inline" set="null" line="436" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x800000.</haxe_doc>
+		</maroon>
+		<mediumAquamarine public="1" get="inline" set="null" line="440" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x66CDAA.</haxe_doc>
+		</mediumAquamarine>
+		<mediumBlue public="1" get="inline" set="null" line="444" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x0000CD.</haxe_doc>
+		</mediumBlue>
+		<mediumOrchid public="1" get="inline" set="null" line="448" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xBA55D3.</haxe_doc>
+		</mediumOrchid>
+		<mediumPurple public="1" get="inline" set="null" line="452" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x9370DB.</haxe_doc>
+		</mediumPurple>
+		<mediumSeaGreen public="1" get="inline" set="null" line="456" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x3CB371.</haxe_doc>
+		</mediumSeaGreen>
+		<mediumSlateBlue public="1" get="inline" set="null" line="460" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x7B68EE.</haxe_doc>
+		</mediumSlateBlue>
+		<mediumSpringGreen public="1" get="inline" set="null" line="464" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x00FA9A.</haxe_doc>
+		</mediumSpringGreen>
+		<mediumTurquoise public="1" get="inline" set="null" line="468" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x48D1CC.</haxe_doc>
+		</mediumTurquoise>
+		<mediumVioletRed public="1" get="inline" set="null" line="472" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xC71585.</haxe_doc>
+		</mediumVioletRed>
+		<midnightBlue public="1" get="inline" set="null" line="476" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x191970.</haxe_doc>
+		</midnightBlue>
+		<mintCream public="1" get="inline" set="null" line="480" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xF5FFFA.</haxe_doc>
+		</mintCream>
+		<mistyRose public="1" get="inline" set="null" line="484" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFF34E1.</haxe_doc>
+		</mistyRose>
+		<moccasin public="1" get="inline" set="null" line="488" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFFE4B5.</haxe_doc>
+		</moccasin>
+		<navajoWhite public="1" get="inline" set="null" line="492" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFFDEAD.</haxe_doc>
+		</navajoWhite>
+		<navy public="1" get="inline" set="null" line="496" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x000080.</haxe_doc>
+		</navy>
+		<oldLace public="1" get="inline" set="null" line="500" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFDF5E6.</haxe_doc>
+		</oldLace>
+		<olive public="1" get="inline" set="null" line="504" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x808000.</haxe_doc>
+		</olive>
+		<oliveDrab public="1" get="inline" set="null" line="508" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x6B8E23.</haxe_doc>
+		</oliveDrab>
+		<orange public="1" get="inline" set="null" line="512" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFFA500.</haxe_doc>
+		</orange>
+		<orangeRed public="1" get="inline" set="null" line="516" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFF4500.</haxe_doc>
+		</orangeRed>
+		<orchid public="1" get="inline" set="null" line="520" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xDA70D6.</haxe_doc>
+		</orchid>
+		<paleGoldenrod public="1" get="inline" set="null" line="524" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xEEE8AA.</haxe_doc>
+		</paleGoldenrod>
+		<paleGreen public="1" get="inline" set="null" line="528" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x98FB98.</haxe_doc>
+		</paleGreen>
+		<paleTurquoise public="1" get="inline" set="null" line="532" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xAFEEEE.</haxe_doc>
+		</paleTurquoise>
+		<paleVioletRed public="1" get="inline" set="null" line="536" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xDB7093.</haxe_doc>
+		</paleVioletRed>
+		<papayaWhip public="1" get="inline" set="null" line="540" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFFEFD5.</haxe_doc>
+		</papayaWhip>
+		<peachPuff public="1" get="inline" set="null" line="544" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFFDAB9.</haxe_doc>
+		</peachPuff>
+		<peru public="1" get="inline" set="null" line="548" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xCD853F.</haxe_doc>
+		</peru>
+		<pink public="1" get="inline" set="null" line="552" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFFC0CB.</haxe_doc>
+		</pink>
+		<plum public="1" get="inline" set="null" line="556" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xDDA0DD.</haxe_doc>
+		</plum>
+		<powderBlue public="1" get="inline" set="null" line="560" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xB0E0E6.</haxe_doc>
+		</powderBlue>
+		<purple public="1" get="inline" set="null" line="564" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x800080.</haxe_doc>
+		</purple>
+		<red public="1" get="inline" set="null" line="568" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFF0000.</haxe_doc>
+		</red>
+		<rosyBrown public="1" get="inline" set="null" line="572" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xBC8F8F.</haxe_doc>
+		</rosyBrown>
+		<royalBlue public="1" get="inline" set="null" line="576" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x4169E1.</haxe_doc>
+		</royalBlue>
+		<saddleBrown public="1" get="inline" set="null" line="580" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x8B4513.</haxe_doc>
+		</saddleBrown>
+		<salmon public="1" get="inline" set="null" line="584" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFA8072.</haxe_doc>
+		</salmon>
+		<sandyBrown public="1" get="inline" set="null" line="588" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xF4A460.</haxe_doc>
+		</sandyBrown>
+		<seaGreen public="1" get="inline" set="null" line="592" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x2E8B57.</haxe_doc>
+		</seaGreen>
+		<seaShell public="1" get="inline" set="null" line="596" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFFF5EE.</haxe_doc>
+		</seaShell>
+		<sienna public="1" get="inline" set="null" line="600" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xA0522D.</haxe_doc>
+		</sienna>
+		<silver public="1" get="inline" set="null" line="604" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xC0C0C0.</haxe_doc>
+		</silver>
+		<skyBlue public="1" get="inline" set="null" line="608" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x87CEEB.</haxe_doc>
+		</skyBlue>
+		<slateBlue public="1" get="inline" set="null" line="612" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x6A5ACD.</haxe_doc>
+		</slateBlue>
+		<slateGray public="1" get="inline" set="null" line="616" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x708090.</haxe_doc>
+		</slateGray>
+		<snow public="1" get="inline" set="null" line="620" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFFFAFA.</haxe_doc>
+		</snow>
+		<springGreen public="1" get="inline" set="null" line="624" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x00FF7F.</haxe_doc>
+		</springGreen>
+		<steelBlue public="1" get="inline" set="null" line="628" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x4682B4.</haxe_doc>
+		</steelBlue>
+		<tan public="1" get="inline" set="null" line="632" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xD2B48C.</haxe_doc>
+		</tan>
+		<teal public="1" get="inline" set="null" line="636" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x008080.</haxe_doc>
+		</teal>
+		<thistle public="1" get="inline" set="null" line="640" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xD8BFD8.</haxe_doc>
+		</thistle>
+		<tomato public="1" get="inline" set="null" line="644" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFF6347.</haxe_doc>
+		</tomato>
+		<turquoise public="1" get="inline" set="null" line="648" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x40E0D0.</haxe_doc>
+		</turquoise>
+		<violet public="1" get="inline" set="null" line="652" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xEE82EE.</haxe_doc>
+		</violet>
+		<wheat public="1" get="inline" set="null" line="656" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xF5DEB3.</haxe_doc>
+		</wheat>
+		<white public="1" get="inline" set="null" line="660" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFFFFFF.</haxe_doc>
+		</white>
+		<whiteSmoke public="1" get="inline" set="null" line="664" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xF5F5F5.</haxe_doc>
+		</whiteSmoke>
+		<yellow public="1" get="inline" set="null" line="668" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0xFFFF00.</haxe_doc>
+		</yellow>
+		<yellowGreen public="1" get="inline" set="null" line="672" static="1">
+			<f a=""><c path="openfl.canvas.Color"/></f>
+			<haxe_doc>* Returns a `Color` with the hexadecimal value of 0x9ACD32.</haxe_doc>
+		</yellowGreen>
 		<valueWithAlpha public="1">
 			<x path="UInt"/>
 			<haxe_doc>* Returns the color with the alpha channel (alpha, red, green, blue).</haxe_doc>
@@ -44750,12 +45151,12 @@
 			<x path="Float"/>
 			<haxe_doc>* Returns only the alpha value extracted from `valueWithAlpha` as a `Float` percentage from 0-1.</haxe_doc>
 		</alpha>
-		<get_alpha set="method" line="40"><f a=""><x path="Float"/></f></get_alpha>
+		<get_alpha set="method" line="39"><f a=""><x path="Float"/></f></get_alpha>
 		<value public="1">
 			<x path="Int"/>
 			<haxe_doc>* Returns the color without the alpha channel (red, green, blue)</haxe_doc>
 		</value>
-		<new public="1" set="method" line="57">
+		<new public="1" set="method" line="56">
 			<f a="?red:?green:?blue:?alpha" v="0:0:0:255">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -44773,370 +45174,600 @@
 	<typedef path="openfl.canvas.ColorData" params="" file="../openfl/canvas/Color.hx" module="openfl.canvas.Color"><c path="openfl.canvas.Color"/></typedef>
 	<class path="openfl.canvas.Object" params="" file="../openfl/canvas/Object.hx">
 		<_x><x path="Float"/></_x>
-		<x public="1" get="accessor" set="accessor"><x path="Float"/></x>
-		<get_x set="method" line="43"><f a=""><x path="Float"/></f></get_x>
-		<set_x set="method" line="44"><f a="val">
+		<x public="1" get="accessor" set="accessor">
+			<x path="Float"/>
+			<haxe_doc>* Gets or sets position of this object on the x-axis.</haxe_doc>
+		</x>
+		<get_x set="method" line="46"><f a=""><x path="Float"/></f></get_x>
+		<set_x set="method" line="47"><f a="val">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_x>
 		<_y><x path="Float"/></_y>
-		<y public="1" get="accessor" set="accessor"><x path="Float"/></y>
-		<get_y set="method" line="48"><f a=""><x path="Float"/></f></get_y>
-		<set_y set="method" line="49"><f a="val">
+		<y public="1" get="accessor" set="accessor">
+			<x path="Float"/>
+			<haxe_doc>* Gets or sets the position of this object on the y-axis.</haxe_doc>
+		</y>
+		<get_y set="method" line="54"><f a=""><x path="Float"/></f></get_y>
+		<set_y set="method" line="55"><f a="val">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_y>
 		<_width><x path="Float"/></_width>
-		<width public="1" get="accessor" set="accessor"><x path="Float"/></width>
-		<get_width set="method" line="53"><f a=""><x path="Float"/></f></get_width>
-		<set_width set="method" line="54"><f a="val">
+		<width public="1" get="accessor" set="accessor">
+			<x path="Float"/>
+			<haxe_doc>* Gets or sets the width of this object.</haxe_doc>
+		</width>
+		<get_width set="method" line="62"><f a=""><x path="Float"/></f></get_width>
+		<set_width set="method" line="63"><f a="val">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_width>
 		<_height><x path="Float"/></_height>
-		<height public="1" get="accessor" set="accessor"><x path="Float"/></height>
-		<get_height set="method" line="58"><f a=""><x path="Float"/></f></get_height>
-		<set_height set="method" line="59"><f a="val">
+		<height public="1" get="accessor" set="accessor">
+			<x path="Float"/>
+			<haxe_doc>* Gets or sets the height of this object.</haxe_doc>
+		</height>
+		<get_height set="method" line="70"><f a=""><x path="Float"/></f></get_height>
+		<set_height set="method" line="71"><f a="val">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_height>
-		<top public="1" get="accessor" set="null"><x path="Float"/></top>
-		<get_top set="method" line="62"><f a=""><x path="Float"/></f></get_top>
-		<left public="1" get="accessor" set="null"><x path="Float"/></left>
-		<get_left set="method" line="65"><f a=""><x path="Float"/></f></get_left>
-		<right public="1" get="accessor" set="null"><x path="Float"/></right>
-		<get_right set="method" line="68"><f a=""><x path="Float"/></f></get_right>
-		<bottom public="1" get="accessor" set="null"><x path="Float"/></bottom>
-		<get_bottom set="method" line="71"><f a=""><x path="Float"/></f></get_bottom>
-		<topLeft public="1" get="accessor" set="null"><c path="openfl.geom.Point"/></topLeft>
-		<get_topLeft set="method" line="74"><f a=""><c path="openfl.geom.Point"/></f></get_topLeft>
-		<topMiddle public="1" get="accessor" set="null"><c path="openfl.geom.Point"/></topMiddle>
-		<get_topMiddle set="method" line="77"><f a=""><c path="openfl.geom.Point"/></f></get_topMiddle>
-		<topRight public="1" get="accessor" set="null"><c path="openfl.geom.Point"/></topRight>
-		<get_topRight set="method" line="80"><f a=""><c path="openfl.geom.Point"/></f></get_topRight>
-		<centerLeft public="1" get="accessor" set="null"><c path="openfl.geom.Point"/></centerLeft>
-		<get_centerLeft set="method" line="83"><f a=""><c path="openfl.geom.Point"/></f></get_centerLeft>
-		<centerMiddle public="1" get="accessor" set="null"><c path="openfl.geom.Point"/></centerMiddle>
-		<get_centerMiddle set="method" line="86"><f a=""><c path="openfl.geom.Point"/></f></get_centerMiddle>
-		<centerRight public="1" get="accessor" set="null"><c path="openfl.geom.Point"/></centerRight>
-		<get_centerRight set="method" line="89"><f a=""><c path="openfl.geom.Point"/></f></get_centerRight>
-		<bottomLeft public="1" get="accessor" set="null"><c path="openfl.geom.Point"/></bottomLeft>
-		<get_bottomLeft set="method" line="92"><f a=""><c path="openfl.geom.Point"/></f></get_bottomLeft>
-		<bottomMiddle public="1" get="accessor" set="null"><c path="openfl.geom.Point"/></bottomMiddle>
-		<get_bottomMiddle set="method" line="95"><f a=""><c path="openfl.geom.Point"/></f></get_bottomMiddle>
-		<bottomRight public="1" get="accessor" set="null"><c path="openfl.geom.Point"/></bottomRight>
-		<get_bottomRight set="method" line="98"><f a=""><c path="openfl.geom.Point"/></f></get_bottomRight>
+		<top public="1" get="accessor" set="null">
+			<x path="Float"/>
+			<haxe_doc>* Gets a value indicating the top-most pixel of this object along the y-axis.
+	 * This is the equivalent of the y position.</haxe_doc>
+		</top>
+		<get_top set="method" line="78"><f a=""><x path="Float"/></f></get_top>
+		<left public="1" get="accessor" set="null">
+			<x path="Float"/>
+			<haxe_doc>* Gets a value indicating the left-most pixel of this object along the x-axis.
+	 * This is the equivalent of the x position.</haxe_doc>
+		</left>
+		<get_left set="method" line="85"><f a=""><x path="Float"/></f></get_left>
+		<right public="1" get="accessor" set="null">
+			<x path="Float"/>
+			<haxe_doc>* Gets a value indicating the right-most pixel of this object along the x-axis.
+	 * This is the equivalent of the x position plus width.</haxe_doc>
+		</right>
+		<get_right set="method" line="92"><f a=""><x path="Float"/></f></get_right>
+		<bottom public="1" get="accessor" set="null">
+			<x path="Float"/>
+			<haxe_doc>* Gets a value indicating the bottom-most pixel of this object along the y-axis.
+	 * This is the equivalent of the y position plus height.</haxe_doc>
+		</bottom>
+		<get_bottom set="method" line="99"><f a=""><x path="Float"/></f></get_bottom>
+		<topLeft public="1" get="accessor" set="null">
+			<c path="openfl.geom.Point"/>
+			<haxe_doc>* Gets a `Point` indicating the top-left most corner of this object. If using any non-rectangular shape
+	 * and you wish to acquire a Point from a given `angle`, you should call its respective function.</haxe_doc>
+		</topLeft>
+		<get_topLeft set="method" line="106"><f a=""><c path="openfl.geom.Point"/></f></get_topLeft>
+		<topMiddle public="1" get="accessor" set="null">
+			<c path="openfl.geom.Point"/>
+			<haxe_doc>* Gets a `Point` indicating the top central position of this object. If using any non-rectangular shape
+	 * and you wish to acquire a Point from a given `angle`, you should call its respective function.</haxe_doc>
+		</topMiddle>
+		<get_topMiddle set="method" line="113"><f a=""><c path="openfl.geom.Point"/></f></get_topMiddle>
+		<topRight public="1" get="accessor" set="null">
+			<c path="openfl.geom.Point"/>
+			<haxe_doc>* Gets a `Point` indicating the top-right most corner of this object. If using any non-rectangular shape
+	 * and you wish to acquire a Point from a given `angle`, you should call its respective function.</haxe_doc>
+		</topRight>
+		<get_topRight set="method" line="120"><f a=""><c path="openfl.geom.Point"/></f></get_topRight>
+		<centerLeft public="1" get="accessor" set="null">
+			<c path="openfl.geom.Point"/>
+			<haxe_doc>* Gets a `Point` indicating the center left position of this object. If using any non-rectangular shape
+	 * and you wish to acquire a Point from a given `angle`, you should call its respective function.</haxe_doc>
+		</centerLeft>
+		<get_centerLeft set="method" line="127"><f a=""><c path="openfl.geom.Point"/></f></get_centerLeft>
+		<centerMiddle public="1" get="accessor" set="null">
+			<c path="openfl.geom.Point"/>
+			<haxe_doc>* Gets a `Point` indicating the exact central position of this object. If using any non-rectangular shape
+	 * and you wish to acquire a Point from a given `angle`, you should call its respective function.</haxe_doc>
+		</centerMiddle>
+		<get_centerMiddle set="method" line="134"><f a=""><c path="openfl.geom.Point"/></f></get_centerMiddle>
+		<centerRight public="1" get="accessor" set="null">
+			<c path="openfl.geom.Point"/>
+			<haxe_doc>* Gets a `Point` indicating the center right position of this object. If using any non-rectangular shape
+	 * and you wish to acquire a Point from a given `angle`, you should call its respective function.</haxe_doc>
+		</centerRight>
+		<get_centerRight set="method" line="141"><f a=""><c path="openfl.geom.Point"/></f></get_centerRight>
+		<bottomLeft public="1" get="accessor" set="null">
+			<c path="openfl.geom.Point"/>
+			<haxe_doc>* Gets a `Point` indicating the bottom-left most corner of this object. If using any non-rectangular shape
+	 * and you wish to acquire a Point from a given `angle`, you should call its respective function.</haxe_doc>
+		</bottomLeft>
+		<get_bottomLeft set="method" line="148"><f a=""><c path="openfl.geom.Point"/></f></get_bottomLeft>
+		<bottomMiddle public="1" get="accessor" set="null">
+			<c path="openfl.geom.Point"/>
+			<haxe_doc>* Gets a `Point` indicating the bottom central position of this object. If using any non-rectangular shape
+	 * and you wish to acquire a Point from a given `angle`, you should call its respective function.</haxe_doc>
+		</bottomMiddle>
+		<get_bottomMiddle set="method" line="155"><f a=""><c path="openfl.geom.Point"/></f></get_bottomMiddle>
+		<bottomRight public="1" get="accessor" set="null">
+			<c path="openfl.geom.Point"/>
+			<haxe_doc>* Gets a `Point` indicating the bottom-right most corner of this object. If using any non-rectangular shape
+	 * and you wish to acquire a Point from a given `angle`, you should call its respective function.</haxe_doc>
+		</bottomRight>
+		<get_bottomRight set="method" line="162"><f a=""><c path="openfl.geom.Point"/></f></get_bottomRight>
 		<_lineColor><c path="openfl.canvas.Color"/></_lineColor>
-		<lineColor public="1" get="accessor" set="accessor"><c path="openfl.canvas.Color"/></lineColor>
-		<get_lineColor set="method" line="102"><f a=""><c path="openfl.canvas.Color"/></f></get_lineColor>
-		<set_lineColor set="method" line="103"><f a="val">
+		<lineColor public="1" get="accessor" set="accessor">
+			<c path="openfl.canvas.Color"/>
+			<haxe_doc>* Gets or sets the `Color` of the line when used to style borders or lines.
+	 * This sets the `lineAlpha` value of the given Color, respectively.</haxe_doc>
+		</lineColor>
+		<get_lineColor set="method" line="170"><f a=""><c path="openfl.canvas.Color"/></f></get_lineColor>
+		<set_lineColor set="method" line="171"><f a="val">
 	<c path="openfl.canvas.Color"/>
 	<c path="openfl.canvas.Color"/>
 </f></set_lineColor>
 		<_lineThickness><x path="Float"/></_lineThickness>
-		<lineThickness public="1" get="accessor" set="accessor"><x path="Float"/></lineThickness>
-		<get_lineThickness set="method" line="111"><f a=""><x path="Float"/></f></get_lineThickness>
-		<set_lineThickness set="method" line="112"><f a="val">
+		<lineThickness public="1" get="accessor" set="accessor">
+			<x path="Float"/>
+			<haxe_doc>* Gets or sets the thickness of lines or borders. This can be a value from 0-255.</haxe_doc>
+		</lineThickness>
+		<get_lineThickness set="method" line="182"><f a=""><x path="Float"/></f></get_lineThickness>
+		<set_lineThickness set="method" line="183"><f a="val">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_lineThickness>
 		<_lineAlpha><x path="Float"/></_lineAlpha>
-		<lineAlpha public="1" get="accessor" set="accessor"><x path="Float"/></lineAlpha>
-		<get_lineAlpha set="method" line="116"><f a=""><x path="Float"/></f></get_lineAlpha>
-		<set_lineAlpha set="method" line="117"><f a="val">
+		<lineAlpha public="1" get="accessor" set="accessor">
+			<x path="Float"/>
+			<haxe_doc>* Gets or sets a value representing the opacity of lines or borders. This is a percentage value from 0-1.</haxe_doc>
+		</lineAlpha>
+		<get_lineAlpha set="method" line="190"><f a=""><x path="Float"/></f></get_lineAlpha>
+		<set_lineAlpha set="method" line="191"><f a="val">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_lineAlpha>
 		<_linePixelHinting><x path="Bool"/></_linePixelHinting>
-		<linePixelHinting public="1" get="accessor" set="accessor"><x path="Bool"/></linePixelHinting>
-		<get_linePixelHinting set="method" line="121"><f a=""><x path="Bool"/></f></get_linePixelHinting>
-		<set_linePixelHinting set="method" line="122"><f a="val">
+		<linePixelHinting public="1" get="accessor" set="accessor">
+			<x path="Bool"/>
+			<haxe_doc>* Gets or sets a value indicating that lines will use full pixel hinting.</haxe_doc>
+		</linePixelHinting>
+		<get_linePixelHinting set="method" line="198"><f a=""><x path="Bool"/></f></get_linePixelHinting>
+		<set_linePixelHinting set="method" line="199"><f a="val">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_linePixelHinting>
 		<_lineScaleMode><e path="openfl.display.LineScaleMode"/></_lineScaleMode>
-		<lineScaleMode public="1" get="accessor" set="accessor"><e path="openfl.display.LineScaleMode"/></lineScaleMode>
-		<get_lineScaleMode set="method" line="126"><f a=""><e path="openfl.display.LineScaleMode"/></f></get_lineScaleMode>
-		<set_lineScaleMode set="method" line="127"><f a="val">
+		<lineScaleMode public="1" get="accessor" set="accessor">
+			<e path="openfl.display.LineScaleMode"/>
+			<haxe_doc>* Gets or sets a value indicating how lines are scaled when it's calling parent object is re-scaled.</haxe_doc>
+		</lineScaleMode>
+		<get_lineScaleMode set="method" line="206"><f a=""><e path="openfl.display.LineScaleMode"/></f></get_lineScaleMode>
+		<set_lineScaleMode set="method" line="207"><f a="val">
 	<e path="openfl.display.LineScaleMode"/>
 	<e path="openfl.display.LineScaleMode"/>
 </f></set_lineScaleMode>
 		<_lineCapsStyle><e path="openfl.display.CapsStyle"/></_lineCapsStyle>
-		<lineCapsStyle public="1" get="accessor" set="accessor"><e path="openfl.display.CapsStyle"/></lineCapsStyle>
-		<get_lineCapsStyle set="method" line="131"><f a=""><e path="openfl.display.CapsStyle"/></f></get_lineCapsStyle>
-		<set_lineCapsStyle set="method" line="132"><f a="val">
+		<lineCapsStyle public="1" get="accessor" set="accessor">
+			<e path="openfl.display.CapsStyle"/>
+			<haxe_doc>* Gets or sets a value indicating the edges of a line. For example, `ROUND` will result in both ends of a line
+	 * beiing rounded.</haxe_doc>
+		</lineCapsStyle>
+		<get_lineCapsStyle set="method" line="215"><f a=""><e path="openfl.display.CapsStyle"/></f></get_lineCapsStyle>
+		<set_lineCapsStyle set="method" line="216"><f a="val">
 	<e path="openfl.display.CapsStyle"/>
 	<e path="openfl.display.CapsStyle"/>
 </f></set_lineCapsStyle>
 		<_lineJointStyle><e path="openfl.display.JointStyle"/></_lineJointStyle>
-		<lineJointStyle public="1" get="accessor" set="accessor"><e path="openfl.display.JointStyle"/></lineJointStyle>
-		<get_lineJointStyle set="method" line="136"><f a=""><e path="openfl.display.JointStyle"/></f></get_lineJointStyle>
-		<set_lineJointStyle set="method" line="137"><f a="val">
+		<lineJointStyle public="1" get="accessor" set="accessor">
+			<e path="openfl.display.JointStyle"/>
+			<haxe_doc>* Gets or sets a value indicating the visual representation of lines that inter-connect. For example, `ROUND` will result
+	 * in a border corner being rounded than completely rough; should not be confused with rounded rectangles.</haxe_doc>
+		</lineJointStyle>
+		<get_lineJointStyle set="method" line="224"><f a=""><e path="openfl.display.JointStyle"/></f></get_lineJointStyle>
+		<set_lineJointStyle set="method" line="225"><f a="val">
 	<e path="openfl.display.JointStyle"/>
 	<e path="openfl.display.JointStyle"/>
 </f></set_lineJointStyle>
 		<_lineMiterLimit><x path="Float"/></_lineMiterLimit>
-		<lineMiterLimit public="1" get="accessor" set="accessor"><x path="Float"/></lineMiterLimit>
-		<get_lineMiterLimit set="method" line="141"><f a=""><x path="Float"/></f></get_lineMiterLimit>
-		<set_lineMiterLimit set="method" line="142"><f a="val">
+		<lineMiterLimit public="1" get="accessor" set="accessor">
+			<x path="Float"/>
+			<haxe_doc>* Gets or sets a value indicating the percentage limit of line thickness when `JointStyle` is set to `MITER`.</haxe_doc>
+		</lineMiterLimit>
+		<get_lineMiterLimit set="method" line="232"><f a=""><x path="Float"/></f></get_lineMiterLimit>
+		<set_lineMiterLimit set="method" line="233"><f a="val">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_lineMiterLimit>
 		<_lineGradientType><e path="openfl.display.GradientType"/></_lineGradientType>
-		<lineGradientType public="1" get="accessor" set="accessor"><e path="openfl.display.GradientType"/></lineGradientType>
-		<get_lineGradientType set="method" line="146"><f a=""><e path="openfl.display.GradientType"/></f></get_lineGradientType>
-		<set_lineGradientType set="method" line="147"><f a="val">
+		<lineGradientType public="1" get="accessor" set="accessor">
+			<e path="openfl.display.GradientType"/>
+			<haxe_doc>* Gets or sets a value indicating either a `LINEAR` or `RADIAL` gradient.</haxe_doc>
+		</lineGradientType>
+		<get_lineGradientType set="method" line="240"><f a=""><e path="openfl.display.GradientType"/></f></get_lineGradientType>
+		<set_lineGradientType set="method" line="241"><f a="val">
 	<e path="openfl.display.GradientType"/>
 	<e path="openfl.display.GradientType"/>
 </f></set_lineGradientType>
 		<_lineGradientColors><c path="Array"><c path="openfl.canvas.Color"/></c></_lineGradientColors>
-		<lineGradientColors public="1" get="accessor" set="accessor"><c path="Array"><c path="openfl.canvas.Color"/></c></lineGradientColors>
-		<get_lineGradientColors set="method" line="151"><f a=""><c path="Array"><c path="openfl.canvas.Color"/></c></f></get_lineGradientColors>
-		<set_lineGradientColors set="method" line="152"><f a="val">
+		<lineGradientColors public="1" get="accessor" set="accessor">
+			<c path="Array"><c path="openfl.canvas.Color"/></c>
+			<haxe_doc>* Gets or sets a series of values indicating the number of colors used in a gradient.</haxe_doc>
+		</lineGradientColors>
+		<get_lineGradientColors set="method" line="248"><f a=""><c path="Array"><c path="openfl.canvas.Color"/></c></f></get_lineGradientColors>
+		<set_lineGradientColors set="method" line="249"><f a="val">
 	<c path="Array"><c path="openfl.canvas.Color"/></c>
 	<c path="Array"><c path="openfl.canvas.Color"/></c>
 </f></set_lineGradientColors>
 		<_lineGradientAlphas><c path="Array"><x path="Float"/></c></_lineGradientAlphas>
-		<lineGradientAlphas public="1" get="accessor" set="accessor"><c path="Array"><x path="Float"/></c></lineGradientAlphas>
-		<get_lineGradientAlphas set="method" line="156"><f a=""><c path="Array"><x path="Float"/></c></f></get_lineGradientAlphas>
-		<set_lineGradientAlphas set="method" line="157"><f a="val">
+		<lineGradientAlphas public="1" get="accessor" set="accessor">
+			<c path="Array"><x path="Float"/></c>
+			<haxe_doc>* Gets or sets a series of values indicating the opacity for each color indicated in `lineGradientColors`.</haxe_doc>
+		</lineGradientAlphas>
+		<get_lineGradientAlphas set="method" line="256"><f a=""><c path="Array"><x path="Float"/></c></f></get_lineGradientAlphas>
+		<set_lineGradientAlphas set="method" line="257"><f a="val">
 	<c path="Array"><x path="Float"/></c>
 	<c path="Array"><x path="Float"/></c>
 </f></set_lineGradientAlphas>
 		<_lineGradientRatios><c path="Array"><x path="Int"/></c></_lineGradientRatios>
-		<lineGradientRatios public="1" get="accessor" set="accessor"><c path="Array"><x path="Int"/></c></lineGradientRatios>
-		<get_lineGradientRatios set="method" line="161"><f a=""><c path="Array"><x path="Int"/></c></f></get_lineGradientRatios>
-		<set_lineGradientRatios set="method" line="162"><f a="val">
+		<lineGradientRatios public="1" get="accessor" set="accessor">
+			<c path="Array"><x path="Int"/></c>
+			<haxe_doc>* Gets or sets a series of values indicating the position ratio of each color indicated in `lineGradientColors`. These
+	 * values go from 0-255.</haxe_doc>
+		</lineGradientRatios>
+		<get_lineGradientRatios set="method" line="265"><f a=""><c path="Array"><x path="Int"/></c></f></get_lineGradientRatios>
+		<set_lineGradientRatios set="method" line="266"><f a="val">
 	<c path="Array"><x path="Int"/></c>
 	<c path="Array"><x path="Int"/></c>
 </f></set_lineGradientRatios>
 		<_lineGradientMatrix><c path="openfl.geom.Matrix"/></_lineGradientMatrix>
-		<lineGradientMatrix public="1" get="accessor" set="accessor"><c path="openfl.geom.Matrix"/></lineGradientMatrix>
-		<get_lineGradientMatrix set="method" line="166"><f a=""><c path="openfl.geom.Matrix"/></f></get_lineGradientMatrix>
-		<set_lineGradientMatrix set="method" line="167"><f a="val">
+		<lineGradientMatrix public="1" get="accessor" set="accessor">
+			<c path="openfl.geom.Matrix"/>
+			<haxe_doc>* Gets or sets a matrix that indicates the transformation, positioning and rotation calculations for the given gradient.</haxe_doc>
+		</lineGradientMatrix>
+		<get_lineGradientMatrix set="method" line="273"><f a=""><c path="openfl.geom.Matrix"/></f></get_lineGradientMatrix>
+		<set_lineGradientMatrix set="method" line="274"><f a="val">
 	<c path="openfl.geom.Matrix"/>
 	<c path="openfl.geom.Matrix"/>
 </f></set_lineGradientMatrix>
 		<_lineGradientSpreadMethod><e path="openfl.display.SpreadMethod"/></_lineGradientSpreadMethod>
-		<lineGradientSpreadMethod public="1" get="accessor" set="accessor"><e path="openfl.display.SpreadMethod"/></lineGradientSpreadMethod>
-		<get_lineGradientSpreadMethod set="method" line="171"><f a=""><e path="openfl.display.SpreadMethod"/></f></get_lineGradientSpreadMethod>
-		<set_lineGradientSpreadMethod set="method" line="172"><f a="val">
+		<lineGradientSpreadMethod public="1" get="accessor" set="accessor">
+			<e path="openfl.display.SpreadMethod"/>
+			<haxe_doc>* Gets or sets a `SpreadMethod` that indicates how gradients will spread across the given texture or graphics.</haxe_doc>
+		</lineGradientSpreadMethod>
+		<get_lineGradientSpreadMethod set="method" line="281"><f a=""><e path="openfl.display.SpreadMethod"/></f></get_lineGradientSpreadMethod>
+		<set_lineGradientSpreadMethod set="method" line="282"><f a="val">
 	<e path="openfl.display.SpreadMethod"/>
 	<e path="openfl.display.SpreadMethod"/>
 </f></set_lineGradientSpreadMethod>
 		<_lineInterpolationMethod><e path="openfl.display.InterpolationMethod"/></_lineInterpolationMethod>
-		<lineInterpolationMethod public="1" get="accessor" set="accessor"><e path="openfl.display.InterpolationMethod"/></lineInterpolationMethod>
-		<get_lineInterpolationMethod set="method" line="176"><f a=""><e path="openfl.display.InterpolationMethod"/></f></get_lineInterpolationMethod>
-		<set_lineInterpolationMethod set="method" line="177"><f a="val">
+		<lineInterpolationMethod public="1" get="accessor" set="accessor">
+			<e path="openfl.display.InterpolationMethod"/>
+			<haxe_doc>* Gets or sets a value indicating how the line gradient is rendered.</haxe_doc>
+		</lineInterpolationMethod>
+		<get_lineInterpolationMethod set="method" line="289"><f a=""><e path="openfl.display.InterpolationMethod"/></f></get_lineInterpolationMethod>
+		<set_lineInterpolationMethod set="method" line="290"><f a="val">
 	<e path="openfl.display.InterpolationMethod"/>
 	<e path="openfl.display.InterpolationMethod"/>
 </f></set_lineInterpolationMethod>
 		<_lineFocalPointRatio><x path="Float"/></_lineFocalPointRatio>
-		<lineFocalPointRatio public="1" get="accessor" set="accessor"><x path="Float"/></lineFocalPointRatio>
-		<get_lineFocalPointRatio set="method" line="181"><f a=""><x path="Float"/></f></get_lineFocalPointRatio>
-		<set_lineFocalPointRatio set="method" line="182"><f a="val">
+		<lineFocalPointRatio public="1" get="accessor" set="accessor">
+			<x path="Float"/>
+			<haxe_doc>* Gets or sets a value indicating the focal point of the line gradient, with values between -1 and 1, where 0 is the
+	 * center.</haxe_doc>
+		</lineFocalPointRatio>
+		<get_lineFocalPointRatio set="method" line="298"><f a=""><x path="Float"/></f></get_lineFocalPointRatio>
+		<set_lineFocalPointRatio set="method" line="299"><f a="val">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_lineFocalPointRatio>
 		<_lineBitmapData><c path="openfl.display.BitmapData"/></_lineBitmapData>
-		<lineBitmapData public="1" get="accessor" set="accessor"><c path="openfl.display.BitmapData"/></lineBitmapData>
-		<get_lineBitmapData set="method" line="186"><f a=""><c path="openfl.display.BitmapData"/></f></get_lineBitmapData>
-		<set_lineBitmapData set="method" line="187"><f a="val">
+		<lineBitmapData public="1" get="accessor" set="accessor">
+			<c path="openfl.display.BitmapData"/>
+			<haxe_doc>* Gets or sets the bitmap data to use as the visual representation of a line.</haxe_doc>
+		</lineBitmapData>
+		<get_lineBitmapData set="method" line="306"><f a=""><c path="openfl.display.BitmapData"/></f></get_lineBitmapData>
+		<set_lineBitmapData set="method" line="307"><f a="val">
 	<c path="openfl.display.BitmapData"/>
 	<c path="openfl.display.BitmapData"/>
 </f></set_lineBitmapData>
 		<_lineBitmapMatrix><c path="openfl.geom.Matrix"/></_lineBitmapMatrix>
-		<lineBitmapMatrix public="1" get="accessor" set="accessor"><c path="openfl.geom.Matrix"/></lineBitmapMatrix>
-		<get_lineBitmapMatrix set="method" line="191"><f a=""><c path="openfl.geom.Matrix"/></f></get_lineBitmapMatrix>
-		<set_lineBitmapMatrix set="method" line="192"><f a="val">
+		<lineBitmapMatrix public="1" get="accessor" set="accessor">
+			<c path="openfl.geom.Matrix"/>
+			<haxe_doc>* Gets or sets the `Matrix` indicating the transformation, positioning and rotation of the bitmap to style.</haxe_doc>
+		</lineBitmapMatrix>
+		<get_lineBitmapMatrix set="method" line="314"><f a=""><c path="openfl.geom.Matrix"/></f></get_lineBitmapMatrix>
+		<set_lineBitmapMatrix set="method" line="315"><f a="val">
 	<c path="openfl.geom.Matrix"/>
 	<c path="openfl.geom.Matrix"/>
 </f></set_lineBitmapMatrix>
 		<_lineBitmapRepeat><x path="Bool"/></_lineBitmapRepeat>
-		<lineBitmapRepeat public="1" get="accessor" set="accessor"><x path="Bool"/></lineBitmapRepeat>
-		<get_lineBitmapRepeat set="method" line="196"><f a=""><x path="Bool"/></f></get_lineBitmapRepeat>
-		<set_lineBitmapRepeat set="method" line="197"><f a="val">
+		<lineBitmapRepeat public="1" get="accessor" set="accessor">
+			<x path="Bool"/>
+			<haxe_doc>* Gets or sets a value indicating whether or not the bitmap will repeat (tile).</haxe_doc>
+		</lineBitmapRepeat>
+		<get_lineBitmapRepeat set="method" line="322"><f a=""><x path="Bool"/></f></get_lineBitmapRepeat>
+		<set_lineBitmapRepeat set="method" line="323"><f a="val">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_lineBitmapRepeat>
 		<_lineBitmapSmooth><x path="Bool"/></_lineBitmapSmooth>
-		<lineBitmapSmooth public="1" get="accessor" set="accessor"><x path="Bool"/></lineBitmapSmooth>
-		<get_lineBitmapSmooth set="method" line="201"><f a=""><x path="Bool"/></f></get_lineBitmapSmooth>
-		<set_lineBitmapSmooth set="method" line="202"><f a="val">
+		<lineBitmapSmooth public="1" get="accessor" set="accessor">
+			<x path="Bool"/>
+			<haxe_doc>* Gets or sets a value indicating whether or not the bitmap edges will smooth out (blur).</haxe_doc>
+		</lineBitmapSmooth>
+		<get_lineBitmapSmooth set="method" line="330"><f a=""><x path="Bool"/></f></get_lineBitmapSmooth>
+		<set_lineBitmapSmooth set="method" line="331"><f a="val">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_lineBitmapSmooth>
 		<_fillColor><c path="openfl.canvas.Color"/></_fillColor>
-		<fillColor public="1" get="accessor" set="accessor"><c path="openfl.canvas.Color"/></fillColor>
-		<get_fillColor set="method" line="206"><f a=""><c path="openfl.canvas.Color"/></f></get_fillColor>
-		<set_fillColor set="method" line="207"><f a="val">
+		<fillColor public="1" get="accessor" set="accessor">
+			<c path="openfl.canvas.Color"/>
+			<haxe_doc>* Gets or sets a value indicating the solid `Color` of the object to fill.
+	 * This sets the `fillAlpha` value of the given Color, respectively.</haxe_doc>
+		</fillColor>
+		<get_fillColor set="method" line="339"><f a=""><c path="openfl.canvas.Color"/></f></get_fillColor>
+		<set_fillColor set="method" line="340"><f a="val">
 	<c path="openfl.canvas.Color"/>
 	<c path="openfl.canvas.Color"/>
 </f></set_fillColor>
 		<_fillAlpha><x path="Float"/></_fillAlpha>
-		<fillAlpha public="1" get="accessor" set="accessor"><x path="Float"/></fillAlpha>
-		<get_fillAlpha set="method" line="215"><f a=""><x path="Float"/></f></get_fillAlpha>
-		<set_fillAlpha set="method" line="216"><f a="val">
+		<fillAlpha public="1" get="accessor" set="accessor">
+			<x path="Float"/>
+			<haxe_doc>* Gets or sets a value indicating the opacity of the fill color.</haxe_doc>
+		</fillAlpha>
+		<get_fillAlpha set="method" line="351"><f a=""><x path="Float"/></f></get_fillAlpha>
+		<set_fillAlpha set="method" line="352"><f a="val">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_fillAlpha>
 		<_fillGradientType><e path="openfl.display.GradientType"/></_fillGradientType>
-		<fillGradientType public="1" get="accessor" set="accessor"><e path="openfl.display.GradientType"/></fillGradientType>
-		<get_fillGradientType set="method" line="220"><f a=""><e path="openfl.display.GradientType"/></f></get_fillGradientType>
-		<set_fillGradientType set="method" line="221"><f a="val">
+		<fillGradientType public="1" get="accessor" set="accessor">
+			<e path="openfl.display.GradientType"/>
+			<haxe_doc>* Gets or sets a value indicating either a `LINEAR` or `RADIAL` gradient.</haxe_doc>
+		</fillGradientType>
+		<get_fillGradientType set="method" line="359"><f a=""><e path="openfl.display.GradientType"/></f></get_fillGradientType>
+		<set_fillGradientType set="method" line="360"><f a="val">
 	<e path="openfl.display.GradientType"/>
 	<e path="openfl.display.GradientType"/>
 </f></set_fillGradientType>
 		<_fillGradientColors><c path="Array"><c path="openfl.canvas.Color"/></c></_fillGradientColors>
-		<fillGradientColors public="1" get="accessor" set="accessor"><c path="Array"><c path="openfl.canvas.Color"/></c></fillGradientColors>
-		<get_fillGradientColors set="method" line="225"><f a=""><c path="Array"><c path="openfl.canvas.Color"/></c></f></get_fillGradientColors>
-		<set_fillGradientColors set="method" line="226"><f a="val">
+		<fillGradientColors public="1" get="accessor" set="accessor">
+			<c path="Array"><c path="openfl.canvas.Color"/></c>
+			<haxe_doc>* Gets or sets a series of values indicating the `Color`s to use in a gradient.</haxe_doc>
+		</fillGradientColors>
+		<get_fillGradientColors set="method" line="367"><f a=""><c path="Array"><c path="openfl.canvas.Color"/></c></f></get_fillGradientColors>
+		<set_fillGradientColors set="method" line="368"><f a="val">
 	<c path="Array"><c path="openfl.canvas.Color"/></c>
 	<c path="Array"><c path="openfl.canvas.Color"/></c>
 </f></set_fillGradientColors>
 		<_fillGradientAlphas><c path="Array"><x path="Float"/></c></_fillGradientAlphas>
-		<fillGradientAlphas public="1" get="accessor" set="accessor"><c path="Array"><x path="Float"/></c></fillGradientAlphas>
-		<get_fillGradientAlphas set="method" line="230"><f a=""><c path="Array"><x path="Float"/></c></f></get_fillGradientAlphas>
-		<set_fillGradientAlphas set="method" line="231"><f a="val">
+		<fillGradientAlphas public="1" get="accessor" set="accessor">
+			<c path="Array"><x path="Float"/></c>
+			<haxe_doc>* Gets or sets a series of values indicating the opacity for each color indicated in `fillGradientColors`.</haxe_doc>
+		</fillGradientAlphas>
+		<get_fillGradientAlphas set="method" line="375"><f a=""><c path="Array"><x path="Float"/></c></f></get_fillGradientAlphas>
+		<set_fillGradientAlphas set="method" line="376"><f a="val">
 	<c path="Array"><x path="Float"/></c>
 	<c path="Array"><x path="Float"/></c>
 </f></set_fillGradientAlphas>
 		<_fillGradientRatios><c path="Array"><x path="Int"/></c></_fillGradientRatios>
-		<fillGradientRatios public="1" get="accessor" set="accessor"><c path="Array"><x path="Int"/></c></fillGradientRatios>
-		<get_fillGradientRatios set="method" line="235"><f a=""><c path="Array"><x path="Int"/></c></f></get_fillGradientRatios>
-		<set_fillGradientRatios set="method" line="236"><f a="val">
+		<fillGradientRatios public="1" get="accessor" set="accessor">
+			<c path="Array"><x path="Int"/></c>
+			<haxe_doc>* Gets or sets a series of values indicating the position ratio of each color indicated in `fillGradientColors`. These
+	 * values go from 0-255.</haxe_doc>
+		</fillGradientRatios>
+		<get_fillGradientRatios set="method" line="384"><f a=""><c path="Array"><x path="Int"/></c></f></get_fillGradientRatios>
+		<set_fillGradientRatios set="method" line="385"><f a="val">
 	<c path="Array"><x path="Int"/></c>
 	<c path="Array"><x path="Int"/></c>
 </f></set_fillGradientRatios>
 		<_fillGradientMatrix><c path="openfl.geom.Matrix"/></_fillGradientMatrix>
-		<fillGradientMatrix public="1" get="accessor" set="accessor"><c path="openfl.geom.Matrix"/></fillGradientMatrix>
-		<get_fillGradientMatrix set="method" line="240"><f a=""><c path="openfl.geom.Matrix"/></f></get_fillGradientMatrix>
-		<set_fillGradientMatrix set="method" line="241"><f a="val">
+		<fillGradientMatrix public="1" get="accessor" set="accessor">
+			<c path="openfl.geom.Matrix"/>
+			<haxe_doc>* Gets or sets a matrix that indicates the transformation, positioning and rotation calculations for the given gradient.</haxe_doc>
+		</fillGradientMatrix>
+		<get_fillGradientMatrix set="method" line="392"><f a=""><c path="openfl.geom.Matrix"/></f></get_fillGradientMatrix>
+		<set_fillGradientMatrix set="method" line="393"><f a="val">
 	<c path="openfl.geom.Matrix"/>
 	<c path="openfl.geom.Matrix"/>
 </f></set_fillGradientMatrix>
 		<_fillGradientSpreadMethod><e path="openfl.display.SpreadMethod"/></_fillGradientSpreadMethod>
-		<fillGradientSpreadMethod public="1" get="accessor" set="accessor"><e path="openfl.display.SpreadMethod"/></fillGradientSpreadMethod>
-		<get_fillGradientSpreadMethod set="method" line="245"><f a=""><e path="openfl.display.SpreadMethod"/></f></get_fillGradientSpreadMethod>
-		<set_fillGradientSpreadMethod set="method" line="246"><f a="val">
+		<fillGradientSpreadMethod public="1" get="accessor" set="accessor">
+			<e path="openfl.display.SpreadMethod"/>
+			<haxe_doc>* Gets or sets a `SpreadMethod` that indicates how gradients will spread across the given texture or graphics.</haxe_doc>
+		</fillGradientSpreadMethod>
+		<get_fillGradientSpreadMethod set="method" line="400"><f a=""><e path="openfl.display.SpreadMethod"/></f></get_fillGradientSpreadMethod>
+		<set_fillGradientSpreadMethod set="method" line="401"><f a="val">
 	<e path="openfl.display.SpreadMethod"/>
 	<e path="openfl.display.SpreadMethod"/>
 </f></set_fillGradientSpreadMethod>
 		<_fillInterpolationMethod><e path="openfl.display.InterpolationMethod"/></_fillInterpolationMethod>
-		<fillInterpolationMethod public="1" get="accessor" set="accessor"><e path="openfl.display.InterpolationMethod"/></fillInterpolationMethod>
-		<get_fillInterpolationMethod set="method" line="250"><f a=""><e path="openfl.display.InterpolationMethod"/></f></get_fillInterpolationMethod>
-		<set_fillInterpolationMethod set="method" line="251"><f a="val">
+		<fillInterpolationMethod public="1" get="accessor" set="accessor">
+			<e path="openfl.display.InterpolationMethod"/>
+			<haxe_doc>* Gets or sets a value indicating how the fill gradient is rendered.</haxe_doc>
+		</fillInterpolationMethod>
+		<get_fillInterpolationMethod set="method" line="408"><f a=""><e path="openfl.display.InterpolationMethod"/></f></get_fillInterpolationMethod>
+		<set_fillInterpolationMethod set="method" line="409"><f a="val">
 	<e path="openfl.display.InterpolationMethod"/>
 	<e path="openfl.display.InterpolationMethod"/>
 </f></set_fillInterpolationMethod>
 		<_fillFocalPointRatio><x path="Float"/></_fillFocalPointRatio>
-		<fillFocalPointRatio public="1" get="accessor" set="accessor"><x path="Float"/></fillFocalPointRatio>
-		<get_fillFocalPointRatio set="method" line="255"><f a=""><x path="Float"/></f></get_fillFocalPointRatio>
-		<set_fillFocalPointRatio set="method" line="256"><f a="val">
+		<fillFocalPointRatio public="1" get="accessor" set="accessor">
+			<x path="Float"/>
+			<haxe_doc>* Gets or sets a value indicating the focal point of the fill gradient, with values between -1 and 1, where 0 is the
+	 * center.</haxe_doc>
+		</fillFocalPointRatio>
+		<get_fillFocalPointRatio set="method" line="417"><f a=""><x path="Float"/></f></get_fillFocalPointRatio>
+		<set_fillFocalPointRatio set="method" line="418"><f a="val">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_fillFocalPointRatio>
 		<_fillBitmapData><c path="openfl.display.BitmapData"/></_fillBitmapData>
-		<fillBitmapData public="1" get="accessor" set="accessor"><c path="openfl.display.BitmapData"/></fillBitmapData>
-		<get_fillBitmapData set="method" line="260"><f a=""><c path="openfl.display.BitmapData"/></f></get_fillBitmapData>
-		<set_fillBitmapData set="method" line="261"><f a="val">
+		<fillBitmapData public="1" get="accessor" set="accessor">
+			<c path="openfl.display.BitmapData"/>
+			<haxe_doc>* Gets or sets the bitmap data to use as the visual representation of a fill.</haxe_doc>
+		</fillBitmapData>
+		<get_fillBitmapData set="method" line="425"><f a=""><c path="openfl.display.BitmapData"/></f></get_fillBitmapData>
+		<set_fillBitmapData set="method" line="426"><f a="val">
 	<c path="openfl.display.BitmapData"/>
 	<c path="openfl.display.BitmapData"/>
 </f></set_fillBitmapData>
 		<_fillBitmapMatrix><c path="openfl.geom.Matrix"/></_fillBitmapMatrix>
-		<fillBitmapMatrix public="1" get="accessor" set="accessor"><c path="openfl.geom.Matrix"/></fillBitmapMatrix>
-		<get_fillBitmapMatrix set="method" line="265"><f a=""><c path="openfl.geom.Matrix"/></f></get_fillBitmapMatrix>
-		<set_fillBitmapMatrix set="method" line="266"><f a="val">
+		<fillBitmapMatrix public="1" get="accessor" set="accessor">
+			<c path="openfl.geom.Matrix"/>
+			<haxe_doc>* Gets or sets the `Matrix` indicating the transformation, positioning and rotation of the bitmap to style.</haxe_doc>
+		</fillBitmapMatrix>
+		<get_fillBitmapMatrix set="method" line="433"><f a=""><c path="openfl.geom.Matrix"/></f></get_fillBitmapMatrix>
+		<set_fillBitmapMatrix set="method" line="434"><f a="val">
 	<c path="openfl.geom.Matrix"/>
 	<c path="openfl.geom.Matrix"/>
 </f></set_fillBitmapMatrix>
 		<_fillBitmapRepeat><x path="Bool"/></_fillBitmapRepeat>
-		<fillBitmapRepeat public="1" get="accessor" set="accessor"><x path="Bool"/></fillBitmapRepeat>
-		<get_fillBitmapRepeat set="method" line="270"><f a=""><x path="Bool"/></f></get_fillBitmapRepeat>
-		<set_fillBitmapRepeat set="method" line="271"><f a="val">
+		<fillBitmapRepeat public="1" get="accessor" set="accessor">
+			<x path="Bool"/>
+			<haxe_doc>* Gets or sets a value indicating whether or not the bitmap will repeat (tile).</haxe_doc>
+		</fillBitmapRepeat>
+		<get_fillBitmapRepeat set="method" line="441"><f a=""><x path="Bool"/></f></get_fillBitmapRepeat>
+		<set_fillBitmapRepeat set="method" line="442"><f a="val">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_fillBitmapRepeat>
 		<_fillBitmapSmooth><x path="Bool"/></_fillBitmapSmooth>
-		<fillBitmapSmooth public="1" get="accessor" set="accessor"><x path="Bool"/></fillBitmapSmooth>
-		<get_fillBitmapSmooth set="method" line="275"><f a=""><x path="Bool"/></f></get_fillBitmapSmooth>
-		<set_fillBitmapSmooth set="method" line="276"><f a="val">
+		<fillBitmapSmooth public="1" get="accessor" set="accessor">
+			<x path="Bool"/>
+			<haxe_doc>* Gets or sets a value indicating whether or not the bitmap edges will smooth out (blur).</haxe_doc>
+		</fillBitmapSmooth>
+		<get_fillBitmapSmooth set="method" line="449"><f a=""><x path="Bool"/></f></get_fillBitmapSmooth>
+		<set_fillBitmapSmooth set="method" line="450"><f a="val">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_fillBitmapSmooth>
-		<getStyle set="method" line="295"><f a="styleName">
+		<getStyle set="method" line="475"><f a="styleName">
 	<c path="String"/>
 	<x path="Void"/>
 </f></getStyle>
-		<applyStyle set="method" line="316"><f a="style">
+		<applyStyle set="method" line="496"><f a="style">
 	<d/>
 	<x path="Void"/>
 </f></applyStyle>
-		<getColor set="method" line="427"><f a="value">
+		<getColor set="method" line="607"><f a="value">
 	<c path="String"/>
 	<c path="openfl.canvas.Color"/>
 </f></getColor>
-		<draw public="1" set="method" line="443"><f a="g:?applyFill" v=":false">
-	<c path="openfl.display.Graphics"/>
-	<x path="Bool"/>
-	<x path="Void"/>
-</f></draw>
-		<new public="1" set="method" line="278"><f a="?styleName" v="''">
-	<c path="String"/>
-	<x path="Void"/>
-</f></new>
+		<draw public="1" set="method" line="628">
+			<f a="g:?applyFill" v=":false">
+				<c path="openfl.display.Graphics"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* The function used to commit the drawing for this object. This will only apply styling unless drawn via a derived class.
+	 * @param	g			The graphics component that this object is drawn to.
+	 * @param	applyFill	A value indicating if fill styling options will be applied. Default is false.</haxe_doc>
+		</draw>
+		<new public="1" set="method" line="458">
+			<f a="?styleName" v="''">
+				<c path="String"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Creates a new object with the given style. If the StyleReader's CURRENT instance has been modified,
+	 * the changes will take affect.
+	 * @param	styleName		The name of the style as found in the JSON-formatted file to represent the visuals for 
+	 * 							`this` object.</haxe_doc>
+		</new>
 	</class>
 	<class path="openfl.canvas.Rectangle" params="" file="../openfl/canvas/Rectangle.hx">
 		<extends path="openfl.canvas.Object"/>
 		<_topLeftRadius><x path="Float"/></_topLeftRadius>
-		<topLeftRadius public="1" get="accessor" set="accessor"><x path="Float"/></topLeftRadius>
-		<get_topLeftRadius set="method" line="42"><f a=""><x path="Float"/></f></get_topLeftRadius>
-		<set_topLeftRadius set="method" line="43"><f a="val">
+		<topLeftRadius public="1" get="accessor" set="accessor">
+			<x path="Float"/>
+			<haxe_doc>* Gets or sets a value indicating the top-left radius of this rectangle. If this is greater than 0, and
+	 * all other radiuses are not, the value of this radius will apply to all other radiuses. If not, then
+	 * each radius will keep its own value. If neither radius is greater than 0, the resulting rectangle
+	 * is one with only flat corners.</haxe_doc>
+		</topLeftRadius>
+		<get_topLeftRadius set="method" line="48"><f a=""><x path="Float"/></f></get_topLeftRadius>
+		<set_topLeftRadius set="method" line="49"><f a="val">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_topLeftRadius>
 		<_topRightRadius><x path="Float"/></_topRightRadius>
-		<topRightRadius public="1" get="accessor" set="accessor"><x path="Float"/></topRightRadius>
-		<get_topRightRadius set="method" line="47"><f a=""><x path="Float"/></f></get_topRightRadius>
-		<set_topRightRadius set="method" line="48"><f a="val">
+		<topRightRadius public="1" get="accessor" set="accessor">
+			<x path="Float"/>
+			<haxe_doc>* Gets or sets a value indicating the top-right radius of this rectangle.</haxe_doc>
+		</topRightRadius>
+		<get_topRightRadius set="method" line="56"><f a=""><x path="Float"/></f></get_topRightRadius>
+		<set_topRightRadius set="method" line="57"><f a="val">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_topRightRadius>
 		<_bottomLeftRadius><x path="Float"/></_bottomLeftRadius>
-		<bottomLeftRadius public="1" get="accessor" set="accessor"><x path="Float"/></bottomLeftRadius>
-		<get_bottomLeftRadius set="method" line="52"><f a=""><x path="Float"/></f></get_bottomLeftRadius>
-		<set_bottomLeftRadius set="method" line="53"><f a="val">
+		<bottomLeftRadius public="1" get="accessor" set="accessor">
+			<x path="Float"/>
+			<haxe_doc>* Gets or sets a value indicating the bottom-left radius of this rectangle.</haxe_doc>
+		</bottomLeftRadius>
+		<get_bottomLeftRadius set="method" line="64"><f a=""><x path="Float"/></f></get_bottomLeftRadius>
+		<set_bottomLeftRadius set="method" line="65"><f a="val">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_bottomLeftRadius>
 		<_bottomRightRadius><x path="Float"/></_bottomRightRadius>
-		<bottomRightRadius public="1" get="accessor" set="accessor"><x path="Float"/></bottomRightRadius>
-		<get_bottomRightRadius set="method" line="57"><f a=""><x path="Float"/></f></get_bottomRightRadius>
-		<set_bottomRightRadius set="method" line="58"><f a="val">
+		<bottomRightRadius public="1" get="accessor" set="accessor">
+			<x path="Float"/>
+			<haxe_doc>* Gets or sets a value indicating the bottom-right radius of this rectangle.</haxe_doc>
+		</bottomRightRadius>
+		<get_bottomRightRadius set="method" line="72"><f a=""><x path="Float"/></f></get_bottomRightRadius>
+		<set_bottomRightRadius set="method" line="73"><f a="val">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_bottomRightRadius>
-		<draw public="1" set="method" line="70" override="1"><f a="g:?applyFill" v=":false">
-	<c path="openfl.display.Graphics"/>
-	<x path="Bool"/>
-	<x path="Void"/>
-</f></draw>
-		<new public="1" set="method" line="60"><f a="x:y:width:height:?styleName" v="::::''">
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Float"/>
-	<c path="String"/>
-	<x path="Void"/>
-</f></new>
+		<draw public="1" set="method" line="100" override="1">
+			<f a="g:?applyFill" v=":false">
+				<c path="openfl.display.Graphics"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* This function is used with a graphics component to draw the rectangle, in addition to any styling this rectangle
+	 * have. By default, all default styling variables will be used.
+	 * @param	g			The graphics component to use when drawing this rectangle.
+	 * @param	applyFill	A value indicating whether or not to apply fill stying to this rectangle.</haxe_doc>
+		</draw>
+		<resetRadiuses public="1" set="method" line="120">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Resets all radius properties to 0.</haxe_doc>
+		</resetRadiuses>
+		<new public="1" set="method" line="84">
+			<f a="x:y:width:height:?styleName" v="::::''">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<c path="String"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Creates a new `Rectangle` with the given position and size. If a `styleName` is given, that style within a
+	 * previously parsed JSON-formatted file will be used to format this rectangle.
+	 * @param	x			The position of this rectangle along the x-axis.
+	 * @param	y			The position of this rectangle along the y-axis.
+	 * @param	width		The size of this rectangle's width.
+	 * @param	height		The size of this rectangle's height.
+	 * @param	styleName	The name of the style used to apply styling to this object.</haxe_doc>
+		</new>
 	</class>
 	<class path="openfl.canvas.StyleReader" params="" file="../openfl/canvas/StyleReader.hx">
-		<CURRENT public="1" static="1"><c path="openfl.canvas.StyleReader"/></CURRENT>
-		<classes public="1"><d/></classes>
-		<new public="1" set="method" line="10"><f a="stylesFile">
-	<c path="String"/>
-	<x path="Void"/>
-</f></new>
+		<CURRENT public="1" static="1">
+			<c path="openfl.canvas.StyleReader"/>
+			<haxe_doc>* This `StyleReader` is used by all objects when drawn.</haxe_doc>
+		</CURRENT>
+		<classes public="1">
+			<d/>
+			<haxe_doc>* When JSON-formatted files are parsed, its result is placed in this object.
+	 * This variable should not be modified, unless you know what you are doing.</haxe_doc>
+		</classes>
+		<new public="1" set="method" line="18">
+			<f a="stylesFile">
+				<c path="String"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Create a new `StyleReader` that reads a JSON-formatted file and parses it.
+	 * @param	stylesFile		The JSON-formatted file to look for.</haxe_doc>
+		</new>
 	</class>
 	<class path="openfl.display.Application" params="" file="C:/HaxeToolkit/haxe/lib/openfl/3,3,6/openfl/display/Application.hx">
 		<extends path="lime.app.Application"/>

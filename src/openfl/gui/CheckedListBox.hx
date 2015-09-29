@@ -90,7 +90,7 @@ class CheckedListBox extends Control
 	
 //Functions
 	
-	@:noCompletion private function getItem(values:Array<CheckBoxNodeItems>, defaultFont:String, embedded:Bool, checkForSub:Bool = false)
+	@:noCompletion private function getItems(values:Array<CheckBoxNodeItems>, defaultFont:String, embedded:Bool)
 	{
 		var _items = new List<CheckBoxNode>();
 		for (i in 0...values.length)
@@ -98,7 +98,7 @@ class CheckedListBox extends Control
 			var node = new CheckBoxNode(values[i].text, false, defaultFont, FontStyle.DEFAULT, embedded);
 			if (values[i].items.length > 0)
 			{
-				
+				node.__items = getItems(values[i].items, defaultFont, embedded);
 			}
 			_items.add(node);
 		}
