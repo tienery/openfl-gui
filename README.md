@@ -1,3 +1,5 @@
+This project is no longer being worked on and will be archived.
+
 # openfl-gui
 A GUI extension for OpenFL, containing a rich selection of hardware-accelerated and fully customisable controls.
 
